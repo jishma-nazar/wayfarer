@@ -1,0 +1,889 @@
+{
+  "meta": {
+    "siteName": "Wayfarer & Co.",
+    "title": "Wayfarer & Co. — Viajes pequeños, bien pensados",
+    "description": "Alojamientos, experiencias e itinerarios completos en 40 países, planificados por gente que ya ha estado allí, y con una persona de verdad pendiente de ti durante todo el viaje.",
+    "ogLocale": "es_ES"
+  },
+  "a11y": {
+    "skip": "Saltar al contenido principal",
+    "mainNav": "Principal",
+    "footerNav": "Pie de página",
+    "bottomNav": "Navegación rápida",
+    "home": "Wayfarer & Co. — inicio",
+    "opensNewTab": "(se abre en una pestaña nueva)",
+    "loading": "Cargando…"
+  },
+  "nav": {
+    "destinations": "Destinos",
+    "stays": "Alojamientos",
+    "experiences": "Experiencias",
+    "packages": "Paquetes",
+    "journal": "Revista",
+    "planTrip": "Planear un viaje",
+    "menu": "Menú",
+    "openMenu": "Abrir menú",
+    "closeMenu": "Cerrar menú",
+    "saved": "Guardados",
+    "savedCount": "Guardados ({count, number})",
+    "trips": "Viajes",
+    "explore": "Explorar",
+    "search": "Buscar",
+    "menuPreferences": "Apariencia e idioma",
+    "menuHelp": "¿Necesitas ayuda? Respondemos en menos de una hora."
+  },
+  "theme": {
+    "label": "Tema",
+    "light": "Claro",
+    "dark": "Oscuro",
+    "system": "Sistema",
+    "switchToDark": "Cambiar al tema oscuro",
+    "switchToLight": "Cambiar al tema claro",
+    "current": "Tema actual: {theme}"
+  },
+  "language": {
+    "label": "Idioma",
+    "en": "English",
+    "es": "Español",
+    "switchTo": "Cambiar el idioma a {language}",
+    "current": "Idioma actual: {language}"
+  },
+  "trust": {
+    "rating": "4,9 en {count, number} opiniones",
+    "freeCancellation": "Cancelación gratuita en casi todos los alojamientos",
+    "secure": "Reserva segura",
+    "support": "Atención humana 24/7"
+  },
+  "moods": {
+    "slow": "Sin prisa",
+    "food": "Comida",
+    "coast": "Costa",
+    "mountains": "Montaña",
+    "culture": "Cultura",
+    "family": "Familia"
+  },
+  "search": {
+    "label": "Buscar viajes",
+    "tabsLabel": "¿Qué estás buscando?",
+    "tabs": {
+      "all": "Todo",
+      "stays": "Alojamientos",
+      "experiences": "Experiencias",
+      "flights": "Vuelos",
+      "packages": "Paquetes"
+    },
+    "submit": {
+      "all": "Buscar viajes",
+      "stays": "Buscar alojamientos",
+      "experiences": "Buscar experiencias",
+      "flights": "Pedir precios de vuelos",
+      "packages": "Buscar paquetes"
+    },
+    "destination": "¿Adónde?",
+    "destinationPlaceholder": "Ciudad, región o país",
+    "clearField": "Borrar destino",
+    "origin": "Sales desde",
+    "originPlaceholder": "Ciudad o aeropuerto",
+    "originOptional": "opcional",
+    "when": "Cuándo",
+    "presets": {
+      "flexible": "Flexible",
+      "weekend": "Este fin de semana",
+      "nextMonth": "El mes que viene",
+      "custom": "Elegir fechas"
+    },
+    "presetsLabel": "Fechas rápidas",
+    "checkIn": "Llegada",
+    "checkOut": "Salida",
+    "who": "Quién viaja",
+    "guestsSummary": "{adults, plural, one {# adulto} other {# adultos}}{children, plural, =0 {} one {, # niño} other {, # niños}}",
+    "adults": "Adultos",
+    "adultsHint": "A partir de 13 años",
+    "children": "Niños",
+    "childrenHint": "De 0 a 12 años",
+    "increase": "Añadir uno: {label}",
+    "decrease": "Quitar uno: {label}",
+    "done": "Listo",
+    "anywhere": "Cualquier lugar",
+    "flexibleDates": "Fechas flexibles",
+    "mobilePrompt": "¿Adónde quieres ir?",
+    "mobileHint": "Con el destino nos basta para empezar",
+    "sheetTitle": "Buscar",
+    "closeSheet": "Cerrar búsqueda",
+    "recent": "Búsquedas recientes",
+    "clearRecent": "Borrar recientes",
+    "popular": "Lo más buscado ahora",
+    "suggestions": "Sugerencias",
+    "noMatch": "No encontramos «{query}». Prueba con un país, una región o una ciudad cercana.",
+    "suggestionCount": "{count, plural, =0 {Sin sugerencias} one {# sugerencia; usa las flechas arriba y abajo para recorrerla} other {# sugerencias; usa las flechas arriba y abajo para recorrerlas}}",
+    "kind": {
+      "destination": "Destino",
+      "stay": "Alojamiento",
+      "experience": "Experiencia",
+      "package": "Paquete"
+    },
+    "errors": {
+      "destinationRequired": "Dinos adónde te gustaría ir: con una ciudad, una región o un país es suficiente.",
+      "checkoutBeforeCheckin": "La salida tiene que ser posterior a la llegada.",
+      "pastDate": "Esa fecha ya ha pasado: elige hoy o un día posterior."
+    }
+  },
+  "card": {
+    "stayFrom": "Alojamiento desde <b>{price}</b> la noche",
+    "perNight": "por noche",
+    "taxesIncluded": "impuestos incluidos",
+    "from": "desde",
+    "perPerson": "por persona",
+    "localTime": "{time} hora local",
+    "localTimeLabel": "Hora local en {place}: {time}",
+    "save": "Guardar",
+    "saved": "Guardado",
+    "saveItem": "Guardar {name}",
+    "unsaveItem": "Quitar {name} de guardados",
+    "reviews": "{count, plural, one {# opinión} other {# opiniones}}",
+    "ratingLabel": "Valoración de {score} sobre 5 en {count, plural, one {# opinión} other {# opiniones}}",
+    "freeCancellation": "Cancelación gratuita",
+    "favorite": "Favorito de los viajeros",
+    "hours": "{count, plural, one {# hora} other {# horas}}",
+    "days": "{count, plural, one {# día} other {# días}}",
+    "nights": "{count, plural, one {# noche} other {# noches}}",
+    "viewStay": "Ver {name}",
+    "enquire": "Consultar",
+    "enquireAbout": "Consultar sobre {name}",
+    "reserve": "Solicitar reserva",
+    "seeTrips": "Ver viajes a {place}"
+  },
+  "home": {
+    "hero": {
+      "headline": "Viaja a un lugar que te cambie la mirada.",
+      "lead": "Viajes pequeños y bien hechos, planificados por gente que ya ha estado allí. Alojamientos, experiencias e itinerarios completos en 40 países, con una persona de verdad pendiente de ti durante todo el viaje."
+    },
+    "trending": {
+      "eyebrow": "Lo más buscado",
+      "title": "Adónde se viaja esta temporada",
+      "cta": "Ver todos los destinos",
+      "prev": "Destinos anteriores",
+      "next": "Más destinos",
+      "region": "Destinos más buscados"
+    },
+    "picks": {
+      "eyebrow": "Selección del editor · Alojamientos",
+      "title": "Sitios a los que volveríamos mañana",
+      "dek": "Los elegimos después de dormir en ellos, no por un folleto. Todos los precios incluyen impuestos.",
+      "cta": "Ver todos los alojamientos",
+      "featureLabel": "El destacado del mes"
+    },
+    "moods": {
+      "eyebrow": "Experiencias según el plan",
+      "title": "¿De qué tienes ganas?",
+      "filterLabel": "Filtrar experiencias por tipo de plan",
+      "all": "Todo",
+      "showing": "Mostrando {shown, number} de {total, number}",
+      "cta": "Ver todas las experiencias"
+    },
+    "packages": {
+      "eyebrow": "Paquetes",
+      "title": "Viajes completos, ya resueltos",
+      "dek": "Vuelos, alojamiento, traslados y algunas cosas que no encontrarías por tu cuenta. Un precio cerrado por persona, sin sorpresas al final.",
+      "cta": "Ver todos los paquetes",
+      "pass": "Tarjeta de embarque",
+      "from": "Origen",
+      "to": "Destino",
+      "duration": "Duración",
+      "nextDeparture": "Próxima salida",
+      "fare": "Tarifa",
+      "gate": "Puerta",
+      "gateValue": "Cuando te venga bien",
+      "pricePrefix": "Por persona desde"
+    },
+    "map": {
+      "eyebrow": "El mapa",
+      "title": "Un año de viajes en una sola línea discontinua",
+      "dek": "Nueve lugares de los que nuestros viajeros siempre vuelven con historias. Toca un punto para ver qué hora es allí ahora mismo.",
+      "listLabel": "Lugares del mapa",
+      "mapLabel": "Mapa de destinos destacados, unidos por una ruta discontinua",
+      "close": "Cerrar"
+    },
+    "why": {
+      "eyebrow": "Por qué viajar con nosotros",
+      "title": "Cuatro promesas, por escrito",
+      "photoCaption": "Higashiyama, Kioto. Lo descubrió Mei, nuestra planificadora para Japón",
+      "promises": [
+        {
+          "title": "Te responde una persona en menos de una hora",
+          "body": "De día o de noche, en español o en inglés. Ni un chatbot ni un número de incidencia: alguien que tiene tu viaje abierto delante."
+        },
+        {
+          "title": "Hemos dormido donde te mandamos",
+          "body": "Nuestro equipo se aloja en cada sitio antes de incluirlo, y vuelve cada dos años. Si baja el nivel, sale de la lista."
+        },
+        {
+          "title": "El precio que ves es el que pagas",
+          "body": "Impuestos y tasas incluidos desde el principio. Sin «tasa de resort» al llegar ni trucos con el cambio de moneda al pagar."
+        },
+        {
+          "title": "Los planes cambian. Y no pasa nada.",
+          "body": "La mayoría de los alojamientos se cancelan gratis hasta 48 horas antes. Cuando alguno no, te lo decimos antes de reservar, justo al lado del precio."
+        }
+      ],
+      "cta": "Habla con nuestro equipo"
+    },
+    "stories": {
+      "eyebrow": "Historias de viajeros",
+      "title": "Contado por ellos",
+      "region": "Historias de viajeros",
+      "prev": "Historia anterior",
+      "next": "Historia siguiente",
+      "pause": "Pausar historias",
+      "play": "Reproducir historias",
+      "position": "Historia {current} de {total}",
+      "goTo": "Ir a la historia {n}"
+    },
+    "journal": {
+      "eyebrow": "La Revista",
+      "title": "Apuntes de campo de gente que acaba de volver",
+      "cta": "Leer la Revista",
+      "readTime": "{minutes} min de lectura"
+    },
+    "faq": {
+      "eyebrow": "Conviene saber",
+      "title": "Preguntas, con respuestas claras",
+      "policyLink": "Leer la política de cancelación completa",
+      "items": [
+        {
+          "q": "¿Puedo cancelar?",
+          "a": "La mayoría de los alojamientos y experiencias se cancelan gratis hasta 48 horas antes: busca la indicación «Cancelación gratuita». Los paquetes se cancelan gratis hasta 30 días antes de la salida; después, se reembolsa el 50 % hasta 14 días antes. Las condiciones exactas aparecen en cada reserva antes de pagar."
+        },
+        {
+          "q": "¿Es segura la reserva?",
+          "a": "Los pagos pasan por un proveedor con certificación PCI-DSS, así que nunca vemos ni guardamos el número de tu tarjeta. Recibes la confirmación por escrito de nuestra parte y del alojamiento."
+        },
+        {
+          "q": "¿Necesito una cuenta?",
+          "a": "No. Toca el corazón en lo que quieras y se guarda en este dispositivo. Cuando estés listo, alguien del equipo te envía el viaje por correo."
+        },
+        {
+          "q": "¿Qué significa «impuestos incluidos»?",
+          "a": "El precio por noche incluye el IVA y las tasas de servicio. Lo único que podrías pagar allí es la tasa turística de algunas ciudades, y la indicamos en el alojamiento cuando se aplica."
+        },
+        {
+          "q": "¿Cuánto tardáis en responder?",
+          "a": "Menos de una hora, las 24 horas, todos los días del año. Por WhatsApp suele ser más rápido."
+        }
+      ]
+    },
+    "newsletter": {
+      "title": "Una buena carta al mes: un lugar, un plan y un precio honesto.",
+      "label": "Correo electrónico",
+      "placeholder": "tu@ejemplo.com",
+      "submit": "Suscribirme",
+      "privacy": "Nada de spam. Te das de baja con un clic.",
+      "successTitle": "Ya estás en la lista.",
+      "successBody": "La próxima carta sale el primer domingo del mes. Busca un correo de confirmación de {email}: puede que llegue a Promociones.",
+      "again": "Usar otro correo"
+    }
+  },
+  "validation": {
+    "emailRequired": "Escribe tu correo para saber adónde escribirte.",
+    "emailInvalid": "Eso no parece un correo: revisa que tenga @ y un punto.",
+    "nameRequired": "Dinos cómo quieres que te llamemos.",
+    "phoneInvalid": "Usa números, espacios y un + opcional al principio; por ejemplo, +34 600 000 000.",
+    "destinationRequired": "Dinos adónde te gustaría ir; con una idea aproximada basta.",
+    "travellersRequired": "Tiene que viajar al menos un adulto.",
+    "fixErrors": "{count, plural, one {Revisa # campo antes de continuar.} other {Revisa # campos antes de continuar.}}"
+  },
+  "pages": {
+    "destinations": {
+      "title": "Destinos",
+      "dek": "Todos los lugares para los que organizamos viajes, con la hora que es allí ahora y lo que cuesta una noche."
+    },
+    "stays": {
+      "title": "Alojamientos",
+      "dek": "Hoteles, masías, ryokanes y algún que otro barco. Nuestro equipo ha estado en todos."
+    },
+    "experiences": {
+      "title": "Experiencias",
+      "dek": "Medias jornadas y caminatas largas con gente que conoce el lugar, no que ha leído sobre él."
+    },
+    "packages": {
+      "title": "Paquetes",
+      "dek": "Viajes completos con vuelos, alojamiento y traslados resueltos. Un precio por persona."
+    },
+    "journal": {
+      "title": "La Revista",
+      "dek": "Guías, opiniones y alguna que otra queja, escritas por nuestro equipo al volver a casa."
+    }
+  },
+  "results": {
+    "title": "Búsqueda",
+    "count": "{count, plural, =0 {Sin resultados} one {# resultado} other {# resultados}}",
+    "for": "para «{query}»",
+    "filters": "Filtros",
+    "showFilters": "Filtros",
+    "showFiltersCount": "Filtros ({count, number})",
+    "applyFilters": "{count, plural, =0 {Sin resultados} one {Ver # resultado} other {Ver # resultados}}",
+    "closeFilters": "Cerrar filtros",
+    "type": "Tipo",
+    "price": "Precio",
+    "priceUnder": "Menos de 150 $",
+    "priceMid": "150 $ – 300 $",
+    "priceOver": "Más de 300 $",
+    "rating": "Valoración",
+    "ratingMin": "4,5 o más",
+    "cancellation": "Cancelación",
+    "mood": "Tipo de plan",
+    "clearAll": "Borrar todo",
+    "removeFilter": "Quitar filtro: {label}",
+    "activeFilters": "Filtros activos",
+    "sort": "Ordenar por",
+    "sortOptions": {
+      "recommended": "Recomendados",
+      "priceAsc": "Precio: de menor a mayor",
+      "priceDesc": "Precio: de mayor a menor",
+      "rating": "Mejor valorados"
+    },
+    "searchWithin": "Cambiar búsqueda",
+    "emptyTitle": "Nada cumple todo eso a la vez",
+    "emptyBody": "Prueba a quitar algún filtro o busca un lugar cercano. Esto es lo más buscado ahora:",
+    "emptyNoQuery": "No encontramos «{query}». Revisa cómo se escribe o prueba con uno de estos:",
+    "flightsTitle": "Los vuelos los cotiza una persona",
+    "flightsBody": "Las tarifas cambian cada minuto, así que alguien del equipo revisa las rutas y te envía precios reales, normalmente en menos de una hora. Sin gastos de gestión.",
+    "flightsCta": "Pedir precios de vuelos",
+    "flightsRoute": "De {origin} a {destination}",
+    "kinds": {
+      "destination": "Destinos",
+      "stay": "Alojamientos",
+      "experience": "Experiencias",
+      "package": "Paquetes"
+    }
+  },
+  "saved": {
+    "title": "Guardados",
+    "dek": "Se guardan en este dispositivo; no hace falta cuenta.",
+    "count": "{count, plural, one {# elemento guardado} other {# elementos guardados}}",
+    "emptyTitle": "Todavía no has guardado nada",
+    "emptyBody": "Toca el corazón en cualquier alojamiento, experiencia o paquete y te esperará aquí.",
+    "emptyCta": "Empezar a explorar",
+    "remove": "Quitar",
+    "removeItem": "Quitar {name} de guardados",
+    "enquireAll": "Planear un viaje con estos",
+    "undo": "Deshacer",
+    "removed": "Has quitado {name}."
+  },
+  "trips": {
+    "title": "Tus viajes",
+    "dek": "Las consultas que has enviado desde este dispositivo.",
+    "emptyTitle": "Aún no tienes viajes",
+    "emptyBody": "Cuando envíes una consulta aparecerá aquí con un número de referencia, para que puedas hacer seguimiento con tu planificador.",
+    "emptyCta": "Planear un viaje",
+    "ref": "Ref.",
+    "sent": "Enviada el {date}",
+    "status": "Alguien del equipo te responderá en menos de una hora",
+    "travellers": "{adults, plural, one {# adulto} other {# adultos}}{children, plural, =0 {} one {, # niño} other {, # niños}}"
+  },
+  "enquire": {
+    "title": "Planear un viaje",
+    "dek": "Tres pasos cortos. Es gratis y no tienes que pagar nada: alguien del equipo te responde en menos de una hora.",
+    "progressLabel": "Progreso de la consulta",
+    "step": "Paso {current} de {total}",
+    "steps": [
+      "Tu viaje",
+      "Tus datos",
+      "Revisar y enviar"
+    ],
+    "interest": "Preguntas por",
+    "removeInterest": "Quitar",
+    "destination": "¿Adónde te gustaría ir?",
+    "destinationHint": "Vale una ciudad, un país o «algún sitio cálido en marzo».",
+    "when": "Cuándo",
+    "travellers": "Quién viaja",
+    "budget": "Presupuesto por persona",
+    "budgetHint": "Aproximado está bien: nos ayuda a sugerirte los sitios adecuados.",
+    "budgets": {
+      "under1k": "Menos de 1.000 $",
+      "1to2k": "1.000 $ – 2.500 $",
+      "2to5k": "2.500 $ – 5.000 $",
+      "over5k": "5.000 $ o más",
+      "unsure": "Aún no lo sé"
+    },
+    "notes": "¿Algo que debamos saber?",
+    "notesPlaceholder": "Un aniversario, una rodilla delicada, debilidad por los mercados nocturnos…",
+    "optional": "opcional",
+    "name": "Tu nombre",
+    "email": "Correo electrónico",
+    "emailHint": "Te enviaremos el plan aquí.",
+    "phone": "Teléfono o WhatsApp",
+    "phoneHint": "Incluye el prefijo del país.",
+    "contactPref": "¿Cómo prefieres que te contactemos?",
+    "contactOptions": {
+      "email": "Correo",
+      "whatsapp": "WhatsApp",
+      "phone": "Llamada"
+    },
+    "continue": "Continuar",
+    "back": "Atrás",
+    "edit": "Editar",
+    "send": "Enviar consulta",
+    "sending": "Enviando…",
+    "reviewTitle": "Comprueba que todo esté bien",
+    "notProvided": "Sin indicar",
+    "trust": "Consultar es gratis · No pagas nada ahora · Respuesta en menos de una hora",
+    "successTitle": "Consulta enviada. Ya estamos en ello.",
+    "successBody": "Tu referencia es {ref}. Te responderemos en menos de una hora en {email}.",
+    "nextTitle": "Qué pasa ahora",
+    "next": [
+      "Alguien del equipo lee tus notas y revisa la disponibilidad para tus fechas.",
+      "Recibes un plan breve con precios reales; normalmente, dos opciones para comparar.",
+      "Cambia lo que quieras. Solo pagas cuando te convenza."
+    ],
+    "seeTrips": "Ver tus viajes",
+    "backHome": "Volver al inicio",
+    "draftRestored": "Hemos guardado lo que habías escrito."
+  },
+  "help": {
+    "button": "¿Necesitas ayuda?",
+    "title": "Habla con una persona",
+    "body": "Respondemos en menos de una hora, de día o de noche.",
+    "whatsapp": "Escríbenos por WhatsApp",
+    "call": "Llamar al {phone}",
+    "email": "Escribir a {email}",
+    "close": "Cerrar ayuda"
+  },
+  "footer": {
+    "tagline": "Viajes pequeños, bien pensados. Oporto · Ciudad de México · Bengaluru.",
+    "explore": "Explorar",
+    "help": "Ayuda",
+    "company": "Empresa",
+    "faq": "Preguntas frecuentes",
+    "cancellation": "Política de cancelación",
+    "contactLink": "Contacto",
+    "savedLink": "Guardados",
+    "about": "Quiénes somos",
+    "careers": "Trabaja con nosotros",
+    "press": "Prensa",
+    "accessibility": "Accesibilidad",
+    "contact": "Hablemos",
+    "phone": "Teléfono",
+    "whatsapp": "WhatsApp",
+    "email": "Correo",
+    "office": "Oficina",
+    "address": "Rua das Flores 28, 4050-262 Oporto, Portugal",
+    "hours": "Todos los días, 24 horas",
+    "social": "En otros sitios",
+    "preferences": "Apariencia e idioma",
+    "payments": "Aceptamos",
+    "paymentsLabel": "Formas de pago aceptadas",
+    "secure": "Pagos procesados por un proveedor con certificación PCI-DSS",
+    "legal": "© <year></year> Wayfarer & Co. Agencia de viajes con licencia, n.º de registro 0000 (provisional).",
+    "privacy": "Privacidad",
+    "terms": "Condiciones",
+    "cookies": "Cookies"
+  },
+  "notFound": {
+    "eyebrow": "Error 404",
+    "title": "Esta página se ha perdido por el camino.",
+    "body": "Puede que el enlace sea antiguo o que la página se haya movido. Busca adónde querías ir o empieza por uno de estos:",
+    "home": "Volver al inicio",
+    "photoCaption": "Comporta, Portugal. Tampoco sale en casi ningún mapa"
+  },
+  "journalArticle": {
+    "back": "Todos los artículos de la Revista",
+    "published": "Publicado el {date}",
+    "related": "Planea este viaje",
+    "relatedBody": "Nuestro equipo escribió esto después de ir. Puede organizarte el mismo viaje, o uno mejor."
+  },
+  "content": {
+    "destinations": {
+      "lisbon": {
+        "name": "Lisboa",
+        "country": "Portugal",
+        "caption": "El tranvía 28 en la Baixa",
+        "alt": "Un tranvía amarillo de Lisboa en una calle estrecha entre edificios de colores pastel"
+      },
+      "kyoto": {
+        "name": "Kioto",
+        "country": "Japón",
+        "caption": "Pagoda Yasaka, Higashiyama",
+        "alt": "La pagoda Yasaka, de cinco pisos, sobre una calle tranquila de Kioto al atardecer"
+      },
+      "oaxaca": {
+        "name": "Oaxaca",
+        "country": "México",
+        "caption": "Papel picado sobre el Centro",
+        "alt": "Hileras de papel picado de colores sobre una calle soleada de Oaxaca"
+      },
+      "tbilisi": {
+        "name": "Tiflis",
+        "country": "Georgia",
+        "caption": "El casco antiguo y el Kurá",
+        "alt": "Vista aérea del casco antiguo de Tiflis a ambos lados del río"
+      },
+      "hoiAn": {
+        "name": "Hoi An",
+        "country": "Vietnam",
+        "caption": "Faroles de seda, Ciudad Antigua",
+        "alt": "Faroles de seda encendidos en una tienda de Hoi An por la noche"
+      },
+      "valparaiso": {
+        "name": "Valparaíso",
+        "country": "Chile",
+        "caption": "Casas pintadas del Cerro Alegre",
+        "alt": "Casas azules, amarillas y verdes apiladas en un cerro de Valparaíso"
+      },
+      "cancun": {
+        "name": "Cancún",
+        "country": "México",
+        "caption": "Palapas frente al Caribe",
+        "alt": "Sombrillas de palma y tumbonas frente al agua turquesa del Caribe"
+      },
+      "marrakech": {
+        "name": "Marrakech",
+        "country": "Marruecos",
+        "caption": "La Kutubía y el Alto Atlas",
+        "alt": "El minarete de la Kutubía con las cumbres nevadas del Atlas al fondo"
+      },
+      "seville": {
+        "name": "Sevilla",
+        "country": "España",
+        "caption": "La Giralda con la última luz",
+        "alt": "La catedral de Sevilla y la Giralda bajo el sol de la tarde"
+      },
+      "kerala": {
+        "name": "Kerala",
+        "country": "India",
+        "caption": "Los backwaters cerca de Alappuzha",
+        "alt": "Una casa flotante de madera en un canal bordeado de palmeras en Kerala"
+      },
+      "cusco": {
+        "name": "Cusco",
+        "country": "Perú",
+        "caption": "Una calle que sube a San Blas",
+        "alt": "Una calle estrecha de color ocre en Cusco que sube hacia las montañas"
+      },
+      "porto": {
+        "name": "Oporto",
+        "country": "Portugal",
+        "caption": "Barcos rabelos bajo la Ribeira",
+        "alt": "Barcos rabelos tradicionales amarrados bajo el colorido frente fluvial de Oporto"
+      },
+      "douro": {
+        "name": "Valle del Duero",
+        "country": "Portugal",
+        "caption": "Viñedos en terrazas cerca de Pinhão",
+        "alt": "Viñedos en terrazas que bajan hasta el río Duero una mañana despejada"
+      },
+      "puglia": {
+        "name": "Apulia",
+        "country": "Italia",
+        "caption": "Ostuni, la ciudad blanca",
+        "alt": "El pueblo encalado de Ostuni en lo alto de una colina bajo un cielo pálido"
+      },
+      "tulum": {
+        "name": "Tulum",
+        "country": "México",
+        "caption": "Una casita junto a la carretera de la playa",
+        "alt": "Una cabaña de madera entre palmeras cerca de Tulum"
+      },
+      "atacama": {
+        "name": "Atacama",
+        "country": "Chile",
+        "caption": "Cerros sobre San Pedro",
+        "alt": "Crestas rojizas del desierto bajo un volcán nevado en Atacama"
+      },
+      "patagonia": {
+        "name": "Patagonia",
+        "country": "Chile",
+        "caption": "Los Cuernos del Paine",
+        "alt": "Los cuernos de granito de Torres del Paine sobre un lago azul"
+      },
+      "comporta": {
+        "name": "Comporta",
+        "country": "Portugal",
+        "caption": "El extremo vacío de la playa",
+        "alt": "Un tramo tranquilo de la playa de Comporta con un barco a lo lejos"
+      },
+      "dolomites": {
+        "name": "Dolomitas",
+        "country": "Italia",
+        "caption": "Prados bajo las torres",
+        "alt": "Un prado alpino verde bajo las torres de roca de los Dolomitas"
+      },
+      "lofoten": {
+        "name": "Lofoten",
+        "country": "Noruega",
+        "caption": "Reinefjorden",
+        "alt": "El fiordo de Reine rodeado de montañas verdes y afiladas"
+      },
+      "mexicoCity": {
+        "name": "Ciudad de México",
+        "country": "México",
+        "caption": "Sombrillas de papel, Centro",
+        "alt": "Sombrillas de papel y farolillos colgados sobre una calle de Ciudad de México"
+      }
+    },
+    "stays": {
+      "quintaVale": {
+        "name": "Quinta do Vale Velho",
+        "area": "Pinhão, Valle del Duero",
+        "blurb": "Ocho habitaciones en una bodega en activo. Desayuno en la terraza, un baño en el río antes de comer y una cata de oporto sin prisas.",
+        "alt": "Hileras de viñas en una ladera sobre el río Duero"
+      },
+      "ryokanKurama": {
+        "name": "Kurama Onsen Ryokan",
+        "area": "Kurama, al norte de Kioto",
+        "blurb": "Habitaciones de tatami, aguas termales en un bosque de cedros y cena kaiseki servida en la habitación.",
+        "alt": "Una habitación de tatami con mesa baja y paneles de papel en un ryokan tradicional"
+      },
+      "masseriaUlivi": {
+        "name": "Masseria degli Ulivi",
+        "area": "Ostuni, Apulia",
+        "blurb": "Una masía fortificada entre olivos de 300 años, a diez minutos del Adriático.",
+        "alt": "Un olivo que crece junto a una pared encalada en Ostuni"
+      },
+      "casaSelva": {
+        "name": "Casa Selva",
+        "area": "Tulum, Riviera Maya",
+        "blurb": "Casitas con techo de palma en el tramo tranquilo de la carretera de la playa, con energía solar.",
+        "alt": "Una cabaña con techo de palma bajo cocoteros junto al mar"
+      },
+      "lodgeLicancabur": {
+        "name": "Licancabur Lodge",
+        "area": "San Pedro de Atacama, Chile",
+        "blurb": "Habitaciones de adobe, un observatorio en la azotea y guías que conocen el desierto palmo a palmo.",
+        "alt": "Una persona caminando sola por un salar claro de Atacama"
+      },
+      "cabanasComporta": {
+        "name": "Cabanas do Sado",
+        "area": "Comporta, Alentejo",
+        "blurb": "Arrozales a un lado y playas vacías al otro. Bicicletas incluidas.",
+        "alt": "Atardecer sobre dunas cubiertas de pinos cerca de Comporta"
+      },
+      "kettuvallam": {
+        "name": "Casa flotante Kettuvallam",
+        "area": "Alappuzha, Kerala",
+        "blurb": "Tripulación propia, cocinero y tres días a la deriva por los canales.",
+        "alt": "Una casa flotante tradicional de Kerala en aguas tranquilas"
+      },
+      "casaAlfama": {
+        "name": "Casa Alfama",
+        "area": "Alfama, Lisboa",
+        "blurb": "Una casa de azulejos con azotea sobre el río. Casi todas las noches sube el fado desde la calle.",
+        "alt": "Tejados naranjas de Lisboa que bajan escalonados hacia el agua"
+      },
+      "casonaSanBlas": {
+        "name": "Casona San Blas",
+        "area": "San Blas, Cusco",
+        "blurb": "Una casona colonial con patio, mate de coca al llegar y habitaciones con oxígeno para la altura.",
+        "alt": "La Plaza de Armas de Cusco con la catedral y las montañas detrás"
+      },
+      "refugioPaine": {
+        "name": "Refugio Paine",
+        "area": "Torres del Paine, Patagonia",
+        "blurb": "Doce habitaciones y una sola vista. Al amanecer las torres se vuelven rosas, y lo verás desde la cama.",
+        "alt": "Una excursionista sobre una roca frente a un lago glaciar en la Patagonia"
+      },
+      "cerroAlegre": {
+        "name": "Hostal Cerro Alegre",
+        "area": "Cerro Alegre, Valparaíso",
+        "blurb": "Una casa pintada de principios del siglo XX, con un ascensor funicular en la puerta y el puerto a tus pies.",
+        "alt": "Casas de colores que suben por un cerro de Valparaíso"
+      },
+      "riadZitoun": {
+        "name": "Riad Zitoun",
+        "area": "Medina, Marrakech",
+        "blurb": "Siete habitaciones alrededor de un patio con naranjos, a dos minutos de la Kutubía.",
+        "alt": "Una calesa pasando junto a la mezquita Kutubía"
+      }
+    },
+    "experiences": {
+      "teaKyoto": {
+        "title": "Ceremonia del té en una casa de Gion",
+        "area": "Gion, Kioto",
+        "alt": "Una tetera de hierro y utensilios preparados para una ceremonia del té japonesa"
+      },
+      "oliveHarvest": {
+        "title": "Cosecha de aceitunas y cata del primer prensado",
+        "area": "Ostuni, Apulia",
+        "alt": "Olivos viejos y un muro de piedra seca en Apulia"
+      },
+      "portLodge": {
+        "title": "Cata de oporto en una bodega familiar",
+        "area": "Pinhão, Duero",
+        "alt": "Una entrada con forma de barrica entre viñas otoñales del Duero"
+      },
+      "pastaBologna": {
+        "title": "Pasta a mano con una nonna",
+        "area": "Ostuni, Apulia",
+        "alt": "Unas manos separando tiras de pasta fresca sobre una mesa enharinada"
+      },
+      "spiceSouk": {
+        "title": "El zoco de las especias, con una cocinera",
+        "area": "Medina, Marrakech",
+        "alt": "Cestas de especias y flores secas en un zoco de Marrakech"
+      },
+      "surfEriceira": {
+        "title": "Tus primeras olas en Ericeira",
+        "area": "Ericeira, cerca de Lisboa",
+        "alt": "Un surfista cogiendo una ola en la costa portuguesa"
+      },
+      "cenoteSwim": {
+        "title": "Tres cenotes antes de que llegue la gente",
+        "area": "Valladolid, Yucatán",
+        "alt": "Agua turquesa bajo la bóveda de roca de un cenote"
+      },
+      "kayakLofoten": {
+        "title": "Kayak de mar bajo los picos de Lofoten",
+        "area": "Reine, Lofoten",
+        "alt": "La proa de un kayak naranja entre las paredes de un fiordo"
+      },
+      "hutDolomites": {
+        "title": "De refugio en refugio por los Dolomitas",
+        "area": "Alta Badia, Dolomitas",
+        "alt": "Un excursionista sobre una roca ante valles de los Dolomitas cubiertos de nubes"
+      },
+      "wTrek": {
+        "title": "La W de Torres del Paine, con guía",
+        "area": "Torres del Paine, Patagonia",
+        "alt": "Los Cuernos del Paine sobre un lago turquesa"
+      },
+      "flamencoTriana": {
+        "title": "Flamenco en una peña de Triana",
+        "area": "Triana, Sevilla",
+        "alt": "Una bailaora con vestido negro y volantes rojos en pleno giro"
+      },
+      "weavingTeotitlan": {
+        "title": "Tintes naturales con tejedores zapotecos",
+        "area": "Teotitlán del Valle, Oaxaca",
+        "alt": "Textiles zapotecos tejidos a mano con dibujos de colores vivos"
+      },
+      "lanternHoiAn": {
+        "title": "Haz un farol de seda y suelta uno en el río",
+        "area": "Ciudad Antigua, Hoi An",
+        "alt": "Fachadas antiguas y barcas junto al río en Hoi An"
+      },
+      "sintraTram": {
+        "title": "Sintra en tranvía y a pie",
+        "area": "Sintra, cerca de Lisboa",
+        "alt": "Las torres rojas y amarillas del Palacio da Pena en Sintra"
+      }
+    },
+    "packages": {
+      "douroSeven": {
+        "title": "Siete días tranquilos en el Valle del Duero",
+        "fromCity": "Lisboa",
+        "toCity": "Oporto",
+        "highlights": [
+          "Dos noches en la Ribeira de Oporto y cinco en una bodega",
+          "Barco rabelo hasta Pinhão y conductor para las catas",
+          "Un día sin plan, a propósito"
+        ]
+      },
+      "oaxacaSlow": {
+        "title": "Oaxaca, sin prisas",
+        "fromCity": "Ciudad de México",
+        "toCity": "Oaxaca",
+        "highlights": [
+          "Desayunos de mercado con una cocinera local",
+          "Un día con los tejedores de Teotitlán",
+          "Mezcal de manos de quienes lo hacen"
+        ]
+      },
+      "cuscoValley": {
+        "title": "Cusco y el Valle Sagrado, sin el autobús de las 4 de la mañana",
+        "fromCity": "Lima",
+        "toCity": "Cusco",
+        "highlights": [
+          "Dos noches en el valle para aclimatarte primero",
+          "Machu Picchu en el tren de la tarde, cuando ya hay menos gente",
+          "El mercado de Pisac con una historiadora textil"
+        ]
+      },
+      "keralaWater": {
+        "title": "Kerala sobre el agua",
+        "fromCity": "Bombay",
+        "toCity": "Kochi",
+        "highlights": [
+          "Fuerte Kochi a pie al amanecer",
+          "Dos noches en una casa flotante privada",
+          "Cocinar el almuerzo en casa de una familia"
+        ]
+      }
+    },
+    "stories": {
+      "lucia": {
+        "quote": "Pedimos tranquilidad y nos hicieron caso de verdad. Siete días, dos libros terminados y un bodeguero que nos llevó a comer a casa de su madre.",
+        "name": "Lucía Ferrer",
+        "home": "Madrid",
+        "trip": "Valle del Duero, 7 noches",
+        "alt": "Un pueblo a orillas del río entre las colinas verdes del Duero"
+      },
+      "iyer": {
+        "quote": "Nuestra planificadora nos cambió la ruta para esquivar un tifón a las dos de la mañana, y aun así llegamos al ryokan con el que llevábamos un año soñando.",
+        "name": "Ananya y Rohan Iyer",
+        "home": "Bengaluru",
+        "trip": "Kioto y Kanazawa, 9 noches",
+        "alt": "Una pagoda sobre árboles otoñales con las montañas de Kioto al fondo"
+      },
+      "marcus": {
+        "quote": "Valparaíso era más ruidoso, más empinado y mejor de lo que esperaba. Le quito una estrella solo porque me quedé con ganas de más días.",
+        "name": "Marcus Webb",
+        "home": "Toronto",
+        "trip": "Valparaíso y Atacama, 10 noches",
+        "alt": "Un ascensor funicular que sube entre casas pintadas en Valparaíso"
+      },
+      "sofia": {
+        "quote": "Llevé a mi madre a Oaxaca por sus setenta años. A la mañana siguiente, el tejedor de Teotitlán todavía se acordaba de su nombre. Y todos los demás también.",
+        "name": "Sofía Martínez",
+        "home": "Guadalajara",
+        "trip": "Oaxaca, 6 noches",
+        "alt": "La iglesia de Santo Domingo de Oaxaca y sus jardines con las montañas detrás"
+      }
+    },
+    "articles": {
+      "porto48": {
+        "category": "Guía de ciudad",
+        "title": "Oporto en 48 horas, casi todo a pie",
+        "dek": "Tres colinas, dos puentes, una francesinha muy buena y las calles que se saltan casi todas las visitas guiadas.",
+        "alt": "El puente Don Luis I de Oporto al atardecer",
+        "body": [
+          "Empieza arriba y baja caminando. Coge el funicular hasta Batalha antes de las nueve, cuando las panaderías todavía están sacando bandejas, y sigue la Rua das Flores hacia el río. Una de cada dos puertas es una tienda que lleva noventa años vendiendo lo mismo.",
+          "Cruza el puente Don Luis I por el tablero de arriba con la última luz y cena en la orilla de Gaia, donde están las bodegas de oporto. Reserva una cata, no tres: las buenas se toman su tiempo.",
+          "El segundo día, sube al autobús 500 hasta Foz y vuelve caminando junto al río. Son ocho kilómetros llanos y es la mejor manera de entender cómo la ciudad se encuentra con el Atlántico."
+        ]
+      },
+      "japanTrains": {
+        "category": "Tren",
+        "title": "Los trenes lentos de Japón, y por qué los preferimos",
+        "dek": "Olvídate del shinkansen por un día. Las líneas locales llegan adonde no llega el tren bala, y las vistas compensan las horas de más.",
+        "alt": "Vista desde la ventanilla de un tren japonés de un pueblo y colinas verdes",
+        "body": [
+          "El tren bala es una maravilla, pero en el fondo es un túnel con asientos. Las líneas locales —la Gonō, la San’in, la Iiyama— recorren costas y arrozales a un ritmo que te deja fijarte en las cosas.",
+          "Nuestro equipo incluye al menos un día de tren lento en cada viaje a Japón. Compra un bento en la estación, siéntate del lado del mar y deja que el horario decida la tarde.",
+          "En estas rutas, el pase de tren rara vez sale a cuenta. Te diremos con sinceridad cuándo compensa y cuándo es más barato comprar billetes sueltos."
+        ]
+      },
+      "cdmxBreakfast": {
+        "category": "Comida",
+        "title": "Ciudad de México, desayuno a desayuno",
+        "dek": "Chilaquiles en la Roma, tamales en Coyoacán y una clasificación de pan dulce que defenderemos hasta el final.",
+        "alt": "Gente caminando junto a un edificio de piedra en una calle de Ciudad de México",
+        "body": [
+          "Ciudad de México es una ciudad de desayunos. La comida es tarde y larga, la cena es opcional, pero el desayuno es un ritual, y cada colonia lo vive a su manera.",
+          "En la Roma, pide chilaquiles verdes con huevo estrellado y no los compartas. En Coyoacán, sigue la fila hasta el puesto de tamales junto al mercado y señala lo mismo que haya pedido la persona de delante.",
+          "Nuestra clasificación de conchas es definitiva y no se discute. Pídele la lista a tu planificador: solo la comparte en persona."
+        ]
+      },
+      "tbilisiNow": {
+        "category": "Destino",
+        "title": "Tiflis, antes de que lo descubra todo el mundo",
+        "dek": "Baños de azufre, vino natural y una ciudad que todavía parece estar por descubrir.",
+        "alt": "Tejados de Tiflis bajo un cielo naranja al atardecer",
+        "body": [
+          "Tiflis está en un valle que atrapa la luz de la tarde, y la mayor parte del casco antiguo sigue habitado, no montado para el turista. Reserva una sala privada en los baños de azufre de Abanotubani: con una hora basta.",
+          "En Georgia se hace vino en tinajas de barro, las qvevri, desde hace ocho mil años. Un buen bar de vinos te servirá algo anaranjado, sin filtrar y distinto a todo lo que conoces.",
+          "Ve a finales de la primavera o a principios del otoño. El verano es caluroso; el invierno, bonito pero gris, y en los meses intermedios la ciudad está en su mejor momento."
+        ]
+      }
+    }
+  }
+}
