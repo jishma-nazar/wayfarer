@@ -16,7 +16,7 @@ export default async function Page() {
   const t = await getTranslations("pages.packages");
   return (
     <>
-      <PageHeader title={t("title")} dek={t("dek")} />
+      <PageHeader title={t("title")} dek={t("dek")} photo={{ id: "1559586616-361e18714958" }} />
       <Suspense fallback={<ResultsFallback />}>
         <Results fixedKind="package" />
       </Suspense>

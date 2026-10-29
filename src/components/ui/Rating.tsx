@@ -16,10 +16,10 @@ export function Rating({ score, count, className, tone = "default", compact }: {
           return (
             <span
               key={i}
-              className={cn("relative h-[5px] w-3 overflow-hidden rounded-[1px]", tone === "onDark" ? "bg-white/25" : "bg-hairline-strong/70")}
+              className={cn("relative h-[5px] w-3 overflow-hidden rounded-full", tone === "onDark" ? "bg-white/30" : "bg-hairline-strong")}
             >
               <span
-                className={cn("absolute inset-y-0 left-0", tone === "onDark" ? "bg-[#f4efe6]" : "bg-olive")}
+                className={cn("absolute inset-y-0 left-0", tone === "onDark" ? "bg-[#ff8a5c]" : "bg-accent")}
                 style={{ width: `${fill * 100}%` }}
               />
             </span>
@@ -28,7 +28,7 @@ export function Rating({ score, count, className, tone = "default", compact }: {
       </span>
       <span aria-hidden className="num font-semibold">{scoreText}</span>
       {!compact && (
-        <span aria-hidden className={cn("num", tone === "onDark" ? "text-[#f4efe6]/80" : "text-ink-muted")}>
+        <span aria-hidden className={cn("num", tone === "onDark" ? "text-white/75" : "text-ink-muted")}>
           ({t("reviews", { count })})
         </span>
       )}

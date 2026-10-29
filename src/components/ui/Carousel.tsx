@@ -54,11 +54,11 @@ export function Carousel({ label, prevLabel, nextLabel, children, itemClassName,
   const controls = (
     <div className="hidden gap-2 md:flex">
       <button type="button" onClick={() => page(-1)} disabled={edges.start} aria-label={prevLabel}
-        className="grid size-11 place-items-center rounded-sm border border-hairline-strong text-ink transition-colors hover:border-ink disabled:cursor-default disabled:opacity-35 disabled:hover:border-hairline-strong">
+        className="grid size-12 place-items-center rounded-full border border-hairline-strong text-ink transition-colors hover:border-ink hover:bg-ink hover:text-paper disabled:cursor-default disabled:opacity-30 disabled:hover:border-hairline-strong disabled:hover:bg-transparent disabled:hover:text-ink">
         <ArrowLeft size={18} strokeWidth={1.5} aria-hidden />
       </button>
       <button type="button" onClick={() => page(1)} disabled={edges.end} aria-label={nextLabel}
-        className="grid size-11 place-items-center rounded-sm border border-hairline-strong text-ink transition-colors hover:border-ink disabled:cursor-default disabled:opacity-35 disabled:hover:border-hairline-strong">
+        className="grid size-12 place-items-center rounded-full border border-hairline-strong text-ink transition-colors hover:border-ink hover:bg-ink hover:text-paper disabled:cursor-default disabled:opacity-30 disabled:hover:border-hairline-strong disabled:hover:bg-transparent disabled:hover:text-ink">
         <ArrowRight size={18} strokeWidth={1.5} aria-hidden />
       </button>
     </div>

@@ -15,6 +15,8 @@ import { Stories } from "@/components/sections/Stories";
 import { JournalTeaser } from "@/components/sections/JournalTeaser";
 import { Faq } from "@/components/sections/Faq";
 import { Newsletter } from "@/components/sections/Newsletter";
+import { Marquee } from "@/components/sections/Marquee";
+import { Gallery } from "@/components/sections/Gallery";
 
 export async function generateMetadata(): Promise<Metadata> {
   return { alternates: alternatesFor(await rootLocale(), "/") };
@@ -43,12 +45,14 @@ export default async function HomePage() {
       <Hero />
       {/* Each Suspense boundary is a separate hydration unit: React hydrates the hero first and
           the rest in small interruptible chunks, keeping the main thread responsive on phones. */}
+      <Marquee />
       <Suspense><Trending /></Suspense>
       <Suspense><EditorsPicks /></Suspense>
       <Suspense><ExperiencesByMood /></Suspense>
       <Suspense><Packages /></Suspense>
       <Suspense><MapMoment /></Suspense>
       <WhyUs />
+      <Suspense><Gallery /></Suspense>
       <Suspense><Stories /></Suspense>
       <JournalTeaser />
       <Faq />

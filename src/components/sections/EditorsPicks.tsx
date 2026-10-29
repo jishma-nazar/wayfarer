@@ -3,34 +3,35 @@ import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { stays } from "@/lib/data";
 import { StayCard } from "@/components/cards/StayCard";
+import { Reveal } from "@/components/ui/Reveal";
+import { SectionHead } from "./SectionHead";
 
+/** Bento grid: one big feature stay and four tiles, all full-bleed photography. */
 export function EditorsPicks() {
   const t = useTranslations("home.picks");
-  const picks = stays.filter((s) => s.editorsPick);
-  const [feature, ...rest] = picks;
+  const [feature, ...rest] = stays.filter((s) => s.editorsPick);
 
   return (
     <section aria-labelledby="picks-title" className="container-x section-y">
-      <div className="grid gap-x-10 gap-y-6 lg:grid-cols-12 lg:items-end">
-        <div className="lg:col-span-7">
-          <p className="eyebrow text-accent-strong">{t("eyebrow")}</p>
-          <h2 id="picks-title" className="t-h1 mt-3 max-w-[16ch]">{t("title")}</h2>
-        </div>
-        <div className="lg:col-span-4 lg:col-start-9">
-          <p className="text-ink-muted">{t("dek")}</p>
-          <Link href="/stays" className="btn btn-ghost mt-4">
-            {t("cta")} <ArrowRight size={16} strokeWidth={1.5} aria-hidden />
+      <SectionHead
+        id="picks-title"
+        eyebrow={t("eyebrow")}
+        title={t("title")}
+        dek={t("dek")}
+        action={
+          <Link href="/stays" className="btn btn-ink">
+            {t("cta")} <ArrowRight size={16} strokeWidth={1.75} aria-hidden />
           </Link>
-        </div>
-      </div>
-
-      <div className="mt-12 grid gap-x-6 gap-y-14 sm:grid-cols-2 lg:mt-16 lg:grid-cols-12 lg:gap-x-8">
-        <div className="sm:col-span-2 lg:col-span-6 lg:row-span-2">
-          <p className="eyebrow mb-3 text-ink-muted">{t("featureLabel")}</p>
-          <StayCard s={feature} feature />
-        </div>
+        }
+      />
+      <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:mt-16 lg:h-[min(92vh,880px)] lg:grid-cols-4 lg:grid-rows-2">
+        <Reveal className="sm:col-span-2 lg:row-span-2">
+          <StayCard s={feature} feature fill className="h-full" sizes="(min-width: 1024px) 50vw, 100vw" />
+        </Reveal>
         {rest.map((s, i) => (
-          <StayCard key={s.id} s={s} className={i % 2 === 0 ? "lg:col-span-3" : "lg:col-span-3 lg:mt-14"} />
+          <Reveal key={s.id} delay={i * 90} className="lg:h-full">
+            <StayCard s={s} fill className="lg:h-full lg:min-h-0" sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw" />
+          </Reveal>
         ))}
       </div>
     </section>

@@ -156,7 +156,13 @@
   "home": {
     "hero": {
       "headline": "Go somewhere that changes your mind.",
-      "lead": "Small, well-made trips planned by people who’ve been. Stays, experiences and whole itineraries in 40 countries — with a real person on call the entire time."
+      "lead": "Small, well-made trips planned by people who’ve been. Stays, experiences and whole itineraries in 40 countries — with a real person on call the entire time.",
+      "eyebrow": "Small trips, planned properly",
+      "pause": "Pause slideshow",
+      "play": "Play slideshow",
+      "goTo": "Show {place}",
+      "slides": "Featured places",
+      "scroll": "Scroll to explore"
     },
     "trending": {
       "eyebrow": "Trending now",
@@ -194,7 +200,8 @@
       "fare": "Fare",
       "gate": "Gate",
       "gateValue": "When you’re ready",
-      "pricePrefix": "Per person from"
+      "pricePrefix": "Per person from",
+      "scrollHint": "Scroll to see every trip"
     },
     "map": {
       "eyebrow": "The map",
@@ -281,6 +288,21 @@
       "successTitle": "You’re on the list.",
       "successBody": "The next letter goes out on the first Sunday of the month. Look for a confirmation from {email} — it might land in Promotions.",
       "again": "Use a different email"
+    },
+    "marquee": {
+      "label": "Places we plan trips to"
+    },
+    "gallery": {
+      "eyebrow": "Seen on the road",
+      "title": "Postcards from this year",
+      "dek": "Shot by our planners and the people who travelled with us."
+    },
+    "stats": {
+      "label": "Wayfarer & Co. in numbers",
+      "countries": "countries we plan",
+      "travellers": "travellers since 2011",
+      "rating": "average rating",
+      "reply": "minutes to a human reply"
     }
   },
   "validation": {
@@ -619,6 +641,54 @@
         "country": "Mexico",
         "caption": "Paper umbrellas, Centro",
         "alt": "Paper umbrellas and lanterns strung above a street in Mexico City"
+      },
+      "cappadocia": {
+        "name": "Cappadocia",
+        "country": "Turkey",
+        "caption": "Balloons over Göreme at sunrise",
+        "alt": "Dozens of hot-air balloons rising over Cappadocia's valleys at dawn"
+      },
+      "amalfi": {
+        "name": "Amalfi Coast",
+        "country": "Italy",
+        "caption": "Positano after dark",
+        "alt": "The lit-up houses of Positano stacked above the sea at dusk"
+      },
+      "maldives": {
+        "name": "Maldives",
+        "country": "Maldives",
+        "caption": "Overwater villas, North Malé Atoll",
+        "alt": "Overwater bungalows on stilts linked by a winding boardwalk over turquoise water"
+      },
+      "sahara": {
+        "name": "Sahara",
+        "country": "Morocco",
+        "caption": "Erg Chebbi dunes near Merzouga",
+        "alt": "A camel caravan crossing orange dunes under a deep blue sky"
+      },
+      "iceland": {
+        "name": "Iceland",
+        "country": "Iceland",
+        "caption": "Black-sand beach at Vík",
+        "alt": "Waves breaking on a black-sand beach below misty sea cliffs in Iceland"
+      },
+      "bali": {
+        "name": "Bali",
+        "country": "Indonesia",
+        "caption": "Tegallalang rice terraces",
+        "alt": "Bright green rice terraces and palm trees in Tegallalang, Bali"
+      },
+      "swissAlps": {
+        "name": "Swiss Alps",
+        "country": "Switzerland",
+        "caption": "A red train on an alpine viaduct",
+        "alt": "A red train crossing a stone viaduct through autumn forest in the Swiss Alps"
+      },
+      "serengeti": {
+        "name": "Serengeti",
+        "country": "Tanzania",
+        "caption": "The migration on the plains",
+        "alt": "A great herd of wildebeest grazing on the Serengeti grasslands"
       }
     },
     "stays": {
@@ -883,6 +953,56 @@
           "Georgian wine has been made in clay qvevri for eight thousand years. A good wine bar here will pour you something orange, unfiltered and unlike anything at home.",
           "Go in late spring or early autumn. Summer is hot, winter is beautiful but grey, and the shoulder months are when the city is at its most generous."
         ]
+      }
+    },
+    "gallery": {
+      "sahCamp": {
+        "caption": "Desert camp under the stars, Merzouga",
+        "alt": "Lantern-lit tents in the Sahara under a sky full of stars"
+      },
+      "baliTerraces": {
+        "caption": "Rice terraces from above, Bali",
+        "alt": "Aerial view of curving rice terraces in Bali"
+      },
+      "alpTrain": {
+        "caption": "Window seat to the Matterhorn",
+        "alt": "A red mountain train in deep snow with the Matterhorn ahead"
+      },
+      "cheetah": {
+        "caption": "Morning game drive, Serengeti",
+        "alt": "A cheetah standing on a fallen branch under an acacia tree"
+      },
+      "balloon": {
+        "caption": "Up at 5 a.m., worth it — Cappadocia",
+        "alt": "A striped hot-air balloon floating above Cappadocia's valleys"
+      },
+      "fjadra": {
+        "caption": "Fjaðrárgljúfur canyon, Iceland",
+        "alt": "A river winding through a deep mossy canyon in Iceland"
+      },
+      "jokul": {
+        "caption": "Icebergs at Jökulsárlón",
+        "alt": "Icebergs drifting in a glacier lagoon under dark clouds"
+      },
+      "positanoDay": {
+        "caption": "Positano, stacked on the cliff",
+        "alt": "Colourful houses climbing a steep cliff above the sea in Positano"
+      },
+      "lanterns": {
+        "caption": "Lantern street, Hoi An",
+        "alt": "Glowing silk lanterns hanging in a Hoi An shop at night"
+      },
+      "flamenco": {
+        "caption": "Plaza de España, Seville",
+        "alt": "Visitors under the arches of a grand brick colonnade in Seville"
+      },
+      "surf": {
+        "caption": "Atlantic swell, first light",
+        "alt": "A wave curling in front of green coastal cliffs"
+      },
+      "market": {
+        "caption": "Market morning, fruit stacked high",
+        "alt": "Pyramids of colourful fruit on a market stall"
       }
     }
   }

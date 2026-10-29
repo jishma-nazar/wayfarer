@@ -3,7 +3,7 @@ import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { getMessages, getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { locale as rootLocale } from "next/root-params";
-import { fraunces, hanken, jetbrains } from "../fonts";
+import { display, mono, sans } from "../fonts";
 import "../globals.css";
 import { Providers } from "@/components/Providers";
 import { Header } from "@/components/layout/Header";
@@ -20,8 +20,8 @@ import { SITE_URL, alternatesFor } from "@/lib/seo";
  */
 const CLIENT_NAMESPACES = [
   "a11y", "nav", "theme", "language", "moods", "search", "card", "validation", "results", "saved", "trips",
-  "enquire", "help", "home.moods", "home.packages", "home.map", "home.stories", "home.newsletter",
-  "content.destinations", "content.stays", "content.experiences", "content.packages", "content.stories",
+  "enquire", "help", "home.hero", "home.stats", "home.moods", "home.packages", "home.map", "home.stories", "home.newsletter",
+  "content.destinations", "content.stays", "content.experiences", "content.packages", "content.stories", "content.gallery",
 ];
 
 function pick(messages: Record<string, unknown>, paths: string[]) {
@@ -80,7 +80,7 @@ export default async function LocaleLayout({ children }: LayoutProps<"/[locale]"
     <html
       lang={locale}
       suppressHydrationWarning
-      className={`${fraunces.variable} ${hanken.variable} ${jetbrains.variable}`}
+      className={`${display.variable} ${sans.variable} ${mono.variable}`}
     >
       <head>
         <link rel="preconnect" href="https://images.unsplash.com" />

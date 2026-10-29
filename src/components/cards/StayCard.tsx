@@ -6,51 +6,50 @@ import { cn } from "@/lib/cn";
 import { Photo } from "@/components/ui/Photo";
 import { Rating } from "@/components/ui/Rating";
 import { SaveButton } from "@/components/ui/SaveButton";
-import { PassportStamp } from "@/components/ui/PassportStamp";
+import { FavoriteBadge } from "@/components/ui/FavoriteBadge";
 import { usePrice } from "@/components/ui/Price";
-import { Reveal } from "@/components/ui/Reveal";
 
-export function StayCard({ s, feature, sizes, className }: { s: Stay; feature?: boolean; sizes?: string; className?: string }) {
+/**
+ * Image-first stay card. `fill` makes it take its grid cell's height (bento layout);
+ * otherwise it keeps a portrait ratio.
+ */
+export function StayCard({ s, feature, fill, sizes, className }: { s: Stay; feature?: boolean; fill?: boolean; sizes?: string; className?: string }) {
   const t = useTranslations("content.stays");
   const tc = useTranslations("card");
   const price = usePrice();
   const name = t(`${s.id}.name`);
 
   return (
-    <article className={cn("group relative flex flex-col", className)}>
-      <div className="relative">
-        <Reveal className="overflow-hidden rounded-sm">
-          <Photo
-            photo={s.photo}
-            alt={t(`${s.id}.alt`)}
-            sizes={sizes ?? (feature ? "(min-width: 1024px) 56vw, 100vw" : "(min-width: 1024px) 20vw, (min-width: 640px) 45vw, 100vw")}
-            className={feature ? "aspect-[4/5] sm:aspect-[4/3] lg:aspect-[5/4]" : "aspect-[4/3]"}
-            imgClassName="transition-transform duration-700 ease-out group-hover:scale-[1.03]"
-          />
-        </Reveal>
-        <SaveButton kind="stay" id={s.id} name={name} className="absolute right-3 top-3 z-10" />
-        {s.favorite && <PassportStamp className="absolute -bottom-6 left-3 z-10" size={feature ? 92 : 72} />}
+    <article className={cn("group relative isolate overflow-hidden rounded-[24px] bg-paper-2 text-white", fill ? "h-full min-h-[420px]" : feature ? "aspect-[4/5] sm:aspect-[5/4]" : "aspect-[4/5]", className)}>
+      <Photo
+        photo={s.photo}
+        alt={t(`${s.id}.alt`)}
+        sizes={sizes ?? (feature ? "(min-width: 1024px) 50vw, 100vw" : "(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw")}
+        className="absolute inset-0 h-full"
+        imgClassName="transition-transform duration-[1.2s] ease-out group-hover:scale-[1.07]"
+      />
+      <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/15 to-black/20" />
+      <div className="absolute inset-x-4 top-4 z-10 flex items-start justify-between gap-2">
+        {s.favorite ? <FavoriteBadge /> : <span />}
+        <SaveButton kind="stay" id={s.id} name={name} />
       </div>
-
-      <div className={cn("flex flex-1 flex-col", s.favorite ? "mt-8" : "mt-4")}>
-        <p className="eyebrow text-ink-muted">{t(`${s.id}.area`)}</p>
-        <h3 className={cn("mt-1.5", feature ? "t-h2" : "t-h3")}>
-          <Link href={`/enquire?stay=${s.id}`} className="after:absolute after:inset-0 after:content-[''] hover:text-accent-strong focus-visible:outline-none">
+      <div className={cn("absolute inset-x-0 bottom-0", feature ? "p-6 sm:p-8" : "p-5")}>
+        <p className="eyebrow text-white/75">{t(`${s.id}.area`)}</p>
+        <h3 className={cn("mt-2", feature ? "text-[clamp(2rem,1.4rem+2.6vw,3.5rem)] leading-[0.95]" : "t-h3")}>
+          <Link href={`/enquire?stay=${s.id}`} className="after:absolute after:inset-0 after:content-[''] focus-visible:outline-none group-has-[:focus-visible]:underline">
             {name}
           </Link>
         </h3>
-        {feature && <p className="t-lead mt-3 max-w-[52ch] text-ink-muted">{t(`${s.id}.blurb`)}</p>}
-        <Rating score={s.rating} count={s.reviews} className="mt-3" />
-        <div className="mt-auto flex flex-wrap items-end justify-between gap-x-4 gap-y-2 pt-4">
-          <p>
-            <span className={cn("num font-semibold", feature ? "text-2xl" : "text-xl")}>{price(s.pricePerNight)}</span>{" "}
-            <span className="text-sm text-ink-muted">
-              {tc("perNight")} · {tc("taxesIncluded")}
-            </span>
+        {feature && <p className="mt-3 hidden max-w-[48ch] text-white/80 sm:block">{t(`${s.id}.blurb`)}</p>}
+        <Rating score={s.rating} count={s.reviews} tone="onDark" className="mt-3" />
+        <div className="mt-4 flex flex-wrap items-center gap-2">
+          <p className="inline-flex h-9 items-center rounded-full bg-white px-3.5 text-sm text-[#0e0e10]">
+            <span className="num font-semibold">{price(s.pricePerNight)}</span>
+            <span className="ml-1 text-[#55555c]">{tc("perNight")} · {tc("taxesIncluded")}</span>
           </p>
           {s.freeCancellation && (
-            <p className="inline-flex items-center gap-1 text-sm font-medium text-olive">
-              <Check size={15} strokeWidth={1.5} aria-hidden /> {tc("freeCancellation")}
+            <p className="inline-flex h-9 items-center gap-1 rounded-full bg-black/40 px-3 text-sm backdrop-blur-md">
+              <Check size={14} strokeWidth={2} aria-hidden /> {tc("freeCancellation")}
             </p>
           )}
         </div>

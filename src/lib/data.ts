@@ -9,15 +9,15 @@ export const destinations: Destination[] = [
   { id: "lisbon", lat: 38.72, lon: -9.14, timeZone: "Europe/Lisbon", fromPrice: 139, trending: true, mapOrder: 4, photo: { id: "1585208798174-6cedd86e019a" }, aliases: ["Lisbon", "Lisboa", "Lisbonne"] },
   { id: "kyoto", lat: 35.01, lon: 135.77, timeZone: "Asia/Tokyo", fromPrice: 268, trending: true, mapOrder: 9, photo: { id: "1624253321171-1be53e12f5f4" }, aliases: ["Kyoto", "Kioto", "Kyōto"] },
   { id: "oaxaca", lat: 17.07, lon: -96.73, timeZone: "America/Mexico_City", fromPrice: 92, trending: true, mapOrder: 3, photo: { id: "1763824951292-b082ea414774" }, aliases: ["Oaxaca", "Oaxaca de Juárez", "Teotitlán"] },
-  { id: "tbilisi", lat: 41.72, lon: 44.79, timeZone: "Asia/Tbilisi", fromPrice: 74, trending: true, mapOrder: 6, photo: { id: "1603350576276-24747f7bbf40" }, aliases: ["Tbilisi", "Tiflis", "Georgia", "Sakartvelo"] },
+  { id: "tbilisi", lat: 41.72, lon: 44.79, timeZone: "Asia/Tbilisi", fromPrice: 74, mapOrder: 6, photo: { id: "1603350576276-24747f7bbf40" }, aliases: ["Tbilisi", "Tiflis", "Georgia", "Sakartvelo"] },
   { id: "hoiAn", lat: 15.88, lon: 108.33, timeZone: "Asia/Ho_Chi_Minh", fromPrice: 58, trending: true, mapOrder: 8, photo: { id: "1563354860-799d15199ac3" }, aliases: ["Hoi An", "Hội An", "Hoian"] },
   { id: "valparaiso", lat: -33.05, lon: -71.62, timeZone: "America/Santiago", fromPrice: 84, trending: true, mapOrder: 1, photo: { id: "1490782300182-697b80ad4293" }, aliases: ["Valparaíso", "Valparaiso", "Valpo"] },
-  { id: "cancun", lat: 21.16, lon: -86.85, timeZone: "America/Cancun", fromPrice: 152, trending: true, photo: { id: "1602088113235-229c19758e9f" }, aliases: ["Cancún", "Cancun", "Riviera Maya", "Tulum"] },
+  { id: "cancun", lat: 21.16, lon: -86.85, timeZone: "America/Cancun", fromPrice: 152, photo: { id: "1602088113235-229c19758e9f" }, aliases: ["Cancún", "Cancun", "Riviera Maya", "Tulum"] },
   { id: "marrakech", lat: 31.63, lon: -7.99, timeZone: "Africa/Casablanca", fromPrice: 96, trending: true, mapOrder: 5, photo: { id: "1597212618440-806262de4f6b" }, aliases: ["Marrakech", "Marrakesh", "Marraquech", "Marruecos", "Morocco"] },
   { id: "seville", lat: 37.39, lon: -5.98, timeZone: "Europe/Madrid", fromPrice: 118, trending: true, photo: { id: "1509840841025-9088ba78a826" }, aliases: ["Seville", "Sevilla", "Andalusia", "Andalucía"] },
   { id: "kerala", lat: 9.5, lon: 76.34, timeZone: "Asia/Kolkata", fromPrice: 121, trending: true, mapOrder: 7, photo: { id: "1602216056096-3b40cc0c9944" }, aliases: ["Kerala", "Alappuzha", "Alleppey", "Kochi", "Cochin"] },
   { id: "cusco", lat: -13.53, lon: -71.97, timeZone: "America/Lima", fromPrice: 97, trending: true, mapOrder: 2, photo: { id: "1526697675318-89790adec369" }, aliases: ["Cusco", "Cuzco", "Qosqo", "Machu Picchu", "Sacred Valley", "Valle Sagrado"] },
-  { id: "porto", lat: 41.15, lon: -8.61, timeZone: "Europe/Lisbon", fromPrice: 112, trending: true, photo: { id: "1555881400-74d7acaacd8b" }, aliases: ["Porto", "Oporto"] },
+  { id: "porto", lat: 41.15, lon: -8.61, timeZone: "Europe/Lisbon", fromPrice: 112, photo: { id: "1555881400-74d7acaacd8b" }, aliases: ["Porto", "Oporto"] },
   { id: "douro", lat: 41.19, lon: -7.55, timeZone: "Europe/Lisbon", fromPrice: 214, photo: { id: "1638664370752-8188076afbab" }, aliases: ["Douro", "Douro Valley", "Valle del Duero", "Pinhão", "Pinhao"] },
   { id: "puglia", lat: 40.73, lon: 17.58, timeZone: "Europe/Rome", fromPrice: 176, photo: { id: "1742281325875-7df165d53a46" }, aliases: ["Puglia", "Apulia", "Ostuni", "Italy", "Italia"] },
   { id: "tulum", lat: 20.21, lon: -87.47, timeZone: "America/Cancun", fromPrice: 152, photo: { id: "1621275718772-731c989b5d79" }, aliases: ["Tulum", "Yucatán", "Yucatan", "Riviera Maya", "Cancún", "Cancun", "Quintana Roo", "Valladolid"] },
@@ -27,6 +27,14 @@ export const destinations: Destination[] = [
   { id: "dolomites", lat: 46.41, lon: 11.84, timeZone: "Europe/Rome", fromPrice: 165, photo: { id: "1606771967934-f516d3dc907c" }, aliases: ["Dolomites", "Dolomitas", "Dolomiti"] },
   { id: "lofoten", lat: 68.2, lon: 13.6, timeZone: "Europe/Oslo", fromPrice: 205, photo: { id: "1785500818843-2588e8faf3e8" }, aliases: ["Lofoten", "Norway", "Noruega", "Reine"] },
   { id: "mexicoCity", lat: 19.43, lon: -99.13, timeZone: "America/Mexico_City", fromPrice: 88, photo: { id: "1580934738416-ad531f2920f7" }, aliases: ["Mexico City", "Ciudad de México", "CDMX", "México"] },
+  { id: "cappadocia", lat: 38.64, lon: 34.83, timeZone: "Europe/Istanbul", fromPrice: 110, trending: true, photo: { id: "1604156789095-3348604c0f43" }, aliases: ["Cappadocia", "Capadocia", "Kapadokya", "Göreme", "Goreme", "Turkey", "Turquía"] },
+  { id: "amalfi", lat: 40.63, lon: 14.48, timeZone: "Europe/Rome", fromPrice: 290, trending: true, photo: { id: "1583844056361-4418a8f2a985" }, aliases: ["Amalfi", "Amalfi Coast", "Costa Amalfitana", "Positano", "Italy", "Italia"] },
+  { id: "maldives", lat: 3.2, lon: 73.22, timeZone: "Indian/Maldives", fromPrice: 420, trending: true, photo: { id: "1514282401047-d79a71a590e8" }, aliases: ["Maldives", "Maldivas", "Malé", "Male"] },
+  { id: "sahara", lat: 31.1, lon: -4.01, timeZone: "Africa/Casablanca", fromPrice: 140, trending: true, photo: { id: "1559586616-361e18714958" }, aliases: ["Sahara", "Sáhara", "Merzouga", "Erg Chebbi", "Desert", "Desierto"] },
+  { id: "iceland", lat: 63.42, lon: -19.01, timeZone: "Atlantic/Reykjavik", fromPrice: 260, trending: true, photo: { id: "1500043357865-c6b8827edf10" }, aliases: ["Iceland", "Islandia", "Vík", "Vik", "Reykjavík", "Reykjavik"] },
+  { id: "bali", lat: -8.43, lon: 115.28, timeZone: "Asia/Makassar", fromPrice: 85, trending: true, photo: { id: "1555400038-63f5ba517a47" }, aliases: ["Bali", "Ubud", "Tegallalang", "Indonesia"] },
+  { id: "swissAlps", lat: 46.66, lon: 9.68, timeZone: "Europe/Zurich", fromPrice: 240, photo: { id: "1572041341933-57caa3b8f6d5" }, aliases: ["Swiss Alps", "Alpes suizos", "Switzerland", "Suiza", "Graubünden", "Zermatt"] },
+  { id: "serengeti", lat: -2.33, lon: 34.83, timeZone: "Africa/Dar_es_Salaam", fromPrice: 380, photo: { id: "1580145575237-75fec2a0320b" }, aliases: ["Serengeti", "Serengueti", "Tanzania", "Safari"] },
 ];
 
 export const stays: Stay[] = [
@@ -62,10 +70,10 @@ export const experiences: Experience[] = [
 ];
 
 export const packages: TripPackage[] = [
-  { id: "douroSeven", destinationId: "douro", fromCode: "LIS", toCode: "OPO", nights: 7, price: 1840, fareCode: "WF-DOU-07", departures: "2027-03", rating: 4.9, reviews: 214 },
-  { id: "oaxacaSlow", destinationId: "oaxaca", fromCode: "MEX", toCode: "OAX", nights: 6, price: 1320, fareCode: "WF-OAX-06", departures: "2027-01", rating: 4.8, reviews: 167 },
-  { id: "cuscoValley", destinationId: "cusco", fromCode: "LIM", toCode: "CUZ", nights: 8, price: 2260, fareCode: "WF-CUZ-08", departures: "2027-04", rating: 4.8, reviews: 139 },
-  { id: "keralaWater", destinationId: "kerala", fromCode: "BOM", toCode: "COK", nights: 5, price: 980, fareCode: "WF-KER-05", departures: "2026-12", rating: 4.7, reviews: 302 },
+  { id: "douroSeven", destinationId: "douro", photo: { id: "1555881400-74d7acaacd8b" }, fromCode: "LIS", toCode: "OPO", nights: 7, price: 1840, fareCode: "WF-DOU-07", departures: "2027-03", rating: 4.9, reviews: 214 },
+  { id: "oaxacaSlow", destinationId: "oaxaca", photo: { id: "1763821530010-89534ec80d19" }, fromCode: "MEX", toCode: "OAX", nights: 6, price: 1320, fareCode: "WF-OAX-06", departures: "2027-01", rating: 4.8, reviews: 167 },
+  { id: "cuscoValley", destinationId: "cusco", photo: { id: "1526392060635-9d6019884377" }, fromCode: "LIM", toCode: "CUZ", nights: 8, price: 2260, fareCode: "WF-CUZ-08", departures: "2027-04", rating: 4.8, reviews: 139 },
+  { id: "keralaWater", destinationId: "kerala", photo: { id: "1772729315540-415f2db20d98" }, fromCode: "BOM", toCode: "COK", nights: 5, price: 980, fareCode: "WF-KER-05", departures: "2026-12", rating: 4.7, reviews: 302 },
 ];
 
 export const stories: Story[] = [
@@ -83,7 +91,33 @@ export const articles: Article[] = [
 ];
 
 export const heroPhoto = { id: "1638664370752-8188076afbab", focus: "50% 55%" } as const;
-export const whyPhoto = { id: "1480796927426-f609979314bd", focus: "50% 40%" } as const;
+
+/** Hero slideshow, in order. Captions come from content.destinations.<id>. */
+export const heroSlides: { destinationId: string; photo: { id: string; focus?: string } }[] = [
+  { destinationId: "cappadocia", photo: { id: "1641128324972-af3212f0f6bd", focus: "50% 60%" } },
+  { destinationId: "amalfi", photo: { id: "1583844056361-4418a8f2a985", focus: "60% 50%" } },
+  { destinationId: "maldives", photo: { id: "1574226780565-388f10f8121e", focus: "50% 50%" } },
+  { destinationId: "sahara", photo: { id: "1559586616-361e18714958", focus: "50% 60%" } },
+  { destinationId: "douro", photo: { id: "1638664370752-8188076afbab", focus: "50% 55%" } },
+];
+
+/** "Seen on the road" gallery. Alt text and captions live in content.gallery.<id>. */
+export const gallery: { id: string; photo: { id: string; focus?: string } }[] = [
+  { id: "sahCamp", photo: { id: "1613169620329-6785c004d900" } },
+  { id: "baliTerraces", photo: { id: "1559628233-eb1b1a45564b" } },
+  { id: "alpTrain", photo: { id: "1577953521789-b1e88d5785a8" } },
+  { id: "cheetah", photo: { id: "1597877774402-d04cad0b7596" } },
+  { id: "balloon", photo: { id: "1695415683093-ae5f213ea898" } },
+  { id: "fjadra", photo: { id: "1531168556467-80aace0d0144" } },
+  { id: "jokul", photo: { id: "1473654729523-203e25dfda10" } },
+  { id: "positanoDay", photo: { id: "1561956021-947f09ae0101" } },
+  { id: "lanterns", photo: { id: "1563354860-799d15199ac3" } },
+  { id: "flamenco", photo: { id: "1568891707029-d23e74760db6" } },
+  { id: "surf", photo: { id: "1482531007909-192ac913980a" } },
+  { id: "market", photo: { id: "1577110905059-99e821bb9852" } },
+];
+export const whyPhoto = { id: "1489573280374-2e193c63726c", focus: "50% 60%" } as const;
+export const newsletterPhoto = { id: "1590523277543-a94d2e4eb00b", focus: "50% 50%" } as const;
 export const notFoundPhoto = { id: "1656106345218-439f55037c59" } as const;
 
 export const contact = {

@@ -4,6 +4,7 @@ import { Link } from "@/i18n/navigation";
 import { destinations } from "@/lib/data";
 import { Carousel } from "@/components/ui/Carousel";
 import { DestinationCard } from "@/components/cards/DestinationCard";
+import { Reveal } from "@/components/ui/Reveal";
 
 export function Trending() {
   const t = useTranslations("home.trending");
@@ -15,16 +16,19 @@ export function Trending() {
         label={t("region")}
         prevLabel={t("prev")}
         nextLabel={t("next")}
-        itemClassName="w-[72vw] max-w-[320px] sm:w-[42vw] md:w-[30vw] lg:w-[23vw]"
+        itemClassName="w-[78vw] max-w-[380px] sm:w-[44vw] md:w-[34vw] lg:w-[26vw]"
         header={
-          <div>
-            <p className="eyebrow text-accent-strong">{t("eyebrow")}</p>
-            <h2 id="trending-title" className="t-h1 mt-3 max-w-[18ch]">{t("title")}</h2>
-          </div>
+          <Reveal>
+            <p className="eyebrow inline-flex items-center gap-2 text-accent-strong">
+              <span aria-hidden className="size-1.5 rounded-full bg-accent" />
+              {t("eyebrow")}
+            </p>
+            <h2 id="trending-title" className="t-h1 mt-4 max-w-[14ch]">{t("title")}</h2>
+          </Reveal>
         }
         action={
-          <Link href="/destinations" className="inline-flex min-h-11 items-center gap-2 font-semibold link-underline">
-            {t("cta")} <ArrowRight size={16} strokeWidth={1.5} aria-hidden />
+          <Link href="/destinations" className="btn btn-ghost">
+            {t("cta")} <ArrowRight size={16} strokeWidth={1.75} aria-hidden />
           </Link>
         }
       >

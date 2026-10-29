@@ -36,7 +36,7 @@ export function LanguageSwitcher({ className, tone = "default", size = "sm" }: {
         return (
           <span key={l} className="inline-flex items-center">
             {i > 0 && (
-              <span aria-hidden className={cn("px-0.5", tone === "onPhoto" ? "text-[#f4efe6]/50" : "text-ink-faint")}>
+              <span aria-hidden className={cn("px-0.5", tone === "onPhoto" ? "text-[#ffffff]/50" : "text-ink-faint")}>
                 ·
               </span>
             )}
@@ -46,11 +46,11 @@ export function LanguageSwitcher({ className, tone = "default", size = "sm" }: {
               onClick={() => switchTo(l)}
               aria-current={active ? "true" : undefined}
               className={cn(
-                "inline-grid min-h-11 min-w-11 place-items-center rounded-sm px-1.5 font-semibold uppercase tracking-[0.08em] transition-colors",
+                "inline-grid min-h-10 min-w-10 place-items-center rounded-full px-1.5 font-semibold uppercase tracking-[0.08em] transition-colors",
                 tone === "onPhoto"
                   ? active
-                    ? "text-[#f4efe6] underline decoration-1 underline-offset-[6px]"
-                    : "text-[#f4efe6]/70 hover:text-[#f4efe6]"
+                    ? "text-[#ffffff] underline decoration-1 underline-offset-[6px]"
+                    : "text-[#ffffff]/70 hover:text-[#ffffff]"
                   : active
                     ? "text-ink underline decoration-accent decoration-[1.5px] underline-offset-[6px]"
                     : "text-ink-muted hover:text-ink"

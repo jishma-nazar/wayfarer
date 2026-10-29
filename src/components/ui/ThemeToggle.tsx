@@ -36,8 +36,8 @@ export function ThemeToggle({ className, tone = "default" }: { className?: strin
       aria-checked={isDark}
       onClick={() => change(isDark ? "light" : "dark")}
       className={cn(
-        "group inline-flex min-h-11 items-center gap-2 rounded-sm px-2.5 text-sm font-medium",
-        tone === "onPhoto" ? "text-[#f4efe6] hover:bg-white/10" : "text-ink hover:bg-paper-2",
+        "group inline-flex min-h-10 items-center gap-2 rounded-full px-3 text-sm font-medium",
+        tone === "onPhoto" ? "text-white hover:bg-white/10" : "text-ink hover:bg-paper-2",
         className
       )}
     >
@@ -45,14 +45,14 @@ export function ThemeToggle({ className, tone = "default" }: { className?: strin
         aria-hidden
         className={cn(
           "relative inline-flex h-5 w-9 shrink-0 items-center rounded-full border transition-colors",
-          tone === "onPhoto" ? "border-[#f4efe6]/60" : "border-hairline-strong",
+          tone === "onPhoto" ? "border-white/60" : "border-hairline-strong",
           isDark && "bg-ink/10"
         )}
       >
         <m.span
           className={cn(
             "absolute left-0.5 grid size-4 place-items-center rounded-full",
-            tone === "onPhoto" ? "bg-[#f4efe6] text-[#1b1a17]" : "bg-ink text-paper"
+            tone === "onPhoto" ? "bg-white text-[#0e0e10]" : "bg-ink text-paper"
           )}
           initial={false}
           animate={{ x: isDark ? 16 : 0 }}
@@ -79,7 +79,7 @@ export function ThemeSegmented({ className }: { className?: string }) {
   ] as const;
 
   return (
-    <div role="radiogroup" aria-label={t("label")} className={cn("inline-flex rounded-sm border border-hairline-strong p-1", className)}>
+    <div role="radiogroup" aria-label={t("label")} className={cn("inline-flex rounded-full border border-hairline-strong p-1", className)}>
       {options.map(({ value, label, Icon }) => {
         const active = current === value;
         return (
@@ -90,12 +90,12 @@ export function ThemeSegmented({ className }: { className?: string }) {
             aria-checked={active}
             onClick={() => change(value)}
             className={cn(
-              "relative inline-flex min-h-11 flex-1 items-center justify-center gap-1.5 rounded-[3px] px-3 text-sm font-medium transition-colors",
+              "relative inline-flex min-h-10 flex-1 items-center justify-center gap-1.5 rounded-full px-3 text-sm font-medium transition-colors",
               active ? "text-paper" : "text-ink-muted hover:text-ink"
             )}
           >
             {active && (
-              <m.span layoutId="theme-seg" className="absolute inset-0 rounded-[3px] bg-ink" transition={{ type: "spring", stiffness: 500, damping: 40 }} />
+              <m.span layoutId="theme-seg" className="absolute inset-0 rounded-full bg-ink" transition={{ type: "spring", stiffness: 500, damping: 40 }} />
             )}
             <Icon size={16} strokeWidth={1.5} className="relative" aria-hidden />
             <span className="relative">{label}</span>

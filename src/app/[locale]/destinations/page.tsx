@@ -16,7 +16,7 @@ export default async function Page() {
   const t = await getTranslations("pages.destinations");
   return (
     <>
-      <PageHeader title={t("title")} dek={t("dek")} />
+      <PageHeader title={t("title")} dek={t("dek")} photo={{ id: "1604156789095-3348604c0f43" }} />
       <Suspense fallback={<ResultsFallback />}>
         <Results fixedKind="destination" />
       </Suspense>

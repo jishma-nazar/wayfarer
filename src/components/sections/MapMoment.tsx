@@ -3,6 +3,7 @@ import { destinations } from "@/lib/data";
 import { MAP_VIEWBOX } from "@/lib/map-dots";
 import { project } from "@/lib/geo";
 import { MapPins } from "./MapPins";
+import { SectionHead } from "./SectionHead";
 
 /** Dot-matrix world (generated from Natural Earth) with a dashed route through featured places. */
 export function MapMoment() {
@@ -28,38 +29,11 @@ export function MapMoment() {
     .join("");
 
   return (
-    <section aria-labelledby="map-title" className="container-x section-y">
-      <div className="grid gap-10 lg:grid-cols-12 lg:items-end">
-        <div className="lg:col-span-7">
-          <p className="eyebrow text-accent-strong">{t("eyebrow")}</p>
-          <h2 id="map-title" className="t-h1 mt-3 max-w-[16ch]">{t("title")}</h2>
-        </div>
-        <p className="t-lead text-ink-muted lg:col-span-4 lg:col-start-9">{t("dek")}</p>
-        <div className="lg:col-span-12">
-          <MapPins
-            ids={stops.map((s) => s.id)}
-            map={
-              <div className="relative w-full" style={{ aspectRatio: `${W} / ${H}` }}>
-                {/* Land dots: a cached static SVG used as a mask, coloured by the theme token. */}
-                <div
-                  aria-hidden
-                  className="absolute inset-0 bg-hairline-strong"
-                  style={{ mask: "url(/map-dots.svg) center / 100% 100% no-repeat", WebkitMask: "url(/map-dots.svg) center / 100% 100% no-repeat" }}
-                />
-                <svg viewBox={`0 0 ${W} ${H}`} className="absolute inset-0 h-full w-full" role="img" aria-label={t("mapLabel")}>
-                <path
-                  d={route}
-                  fill="none"
-                  stroke="var(--accent)"
-                  strokeWidth="1.4"
-                  strokeDasharray="5 6"
-                  strokeLinecap="round"
-                  vectorEffect="non-scaling-stroke"
-                />
-                </svg>
-              </div>
-            }
-          />
+    <section aria-labelledby="map-title" className="theme-dark section-y">
+      <div className="container-x">
+        <SectionHead id="map-title" eyebrow={t("eyebrow")} title={t("title")} dek={t("dek")} />
+        <div className="mt-12">
+          <MapPins ids={stops.map((s) => s.id)} route={route} width={W} height={H} label={t("mapLabel")} />
         </div>
       </div>
     </section>

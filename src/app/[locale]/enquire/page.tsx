@@ -15,7 +15,7 @@ export default async function EnquirePage() {
   const t = await getTranslations("enquire");
   return (
     <>
-      <PageHeader title={t("title")} dek={t("dek")} />
+      <PageHeader title={t("title")} dek={t("dek")} photo={{ id: "1583844056361-4418a8f2a985" }} />
       <Suspense fallback={<div className="container-x min-h-[60vh]" aria-busy="true" />}>
         <EnquiryFlow />
       </Suspense>

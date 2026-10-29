@@ -14,7 +14,7 @@ import { SearchModule } from "@/components/search/SearchModule";
 import { DestinationCard } from "@/components/cards/DestinationCard";
 import { StayCard } from "@/components/cards/StayCard";
 import { ExperienceCard } from "@/components/cards/ExperienceCard";
-import { BoardingPassCard } from "@/components/cards/BoardingPassCard";
+import { PackageCard } from "@/components/cards/PackageCard";
 import { Sheet } from "@/components/ui/Sheet";
 
 type Row = {
@@ -179,8 +179,8 @@ export function Results({ fixedKind }: { fixedKind?: ItemKind }) {
 
   return (
     <div>
-      <div className="border-b border-hairline bg-paper-2">
-        <div className="container-x py-6 md:py-8">
+      <div className="container-x pt-2">
+        <div className="md:rounded-[28px] md:border md:border-hairline md:bg-surface md:p-6 md:shadow-float lg:px-8">
           <SearchModule
             key={params.toString()}
             variant="page"
@@ -206,14 +206,14 @@ export function Results({ fixedKind }: { fixedKind?: ItemKind }) {
             {t("count", { count: results.length })}
             {q && <span className="text-ink-muted"> {t("for", { query: q })}</span>}
           </h2>
-          <div className="flex items-center gap-2">
+          <div className="flex max-w-full flex-wrap items-center gap-2">
             <button type="button" onClick={() => setSheetOpen(true)} className="btn btn-ghost lg:hidden">
               <SlidersHorizontal size={16} strokeWidth={1.5} aria-hidden />
               {active.length ? t("showFiltersCount", { count: active.length }) : t("showFilters")}
             </button>
-            <label className="flex items-center gap-2 text-sm">
+            <label className="flex min-w-0 items-center gap-2 text-sm">
               <span className="hidden text-ink-muted sm:inline">{t("sort")}</span>
-              <select value={sort} onChange={(e) => setParam("sort", e.target.value === "recommended" ? undefined : e.target.value)} className="field min-h-11 w-auto py-2 pr-8 text-[0.9375rem]" aria-label={t("sort")}>
+              <select value={sort} onChange={(e) => setParam("sort", e.target.value === "recommended" ? undefined : e.target.value)} className="field min-h-11 w-auto min-w-0 max-w-full rounded-full py-2 pr-8 text-[0.9375rem]" aria-label={t("sort")}>
                 {(["recommended", "priceAsc", "priceDesc", "rating"] as SortKey[]).map((s) => (
                   <option key={s} value={s}>{t(`sortOptions.${s}`)}</option>
                 ))}
@@ -256,7 +256,7 @@ export function Results({ fixedKind }: { fixedKind?: ItemKind }) {
                         <span aria-hidden className="h-px flex-1 bg-hairline" />
                       </h3>
                     )}
-                    <ul role="list" className={cn("grid gap-x-6 gap-y-12", g.kind === "package" ? "grid-cols-1" : g.kind === "destination" ? "grid-cols-2 sm:grid-cols-3 xl:grid-cols-4" : "sm:grid-cols-2 xl:grid-cols-3")}>
+                    <ul role="list" className={cn("grid gap-x-6 gap-y-12", g.kind === "package" ? "sm:grid-cols-2 xl:grid-cols-3" : g.kind === "destination" ? "grid-cols-2 sm:grid-cols-3 xl:grid-cols-4" : "sm:grid-cols-2 xl:grid-cols-3")}>
                       {g.items.map((r) => (
                         <li key={r.id}>{renderRow(r)}</li>
                       ))}
@@ -293,7 +293,7 @@ function renderRow(r: Row) {
     case "experience":
       return <ExperienceCard e={experiences.find((e) => e.id === r.id)!} />;
     case "package":
-      return <BoardingPassCard p={packages.find((p) => p.id === r.id)!} notch="var(--paper)" className="border border-hairline" />;
+      return <PackageCard p={packages.find((p) => p.id === r.id)!} />;
   }
 }
 

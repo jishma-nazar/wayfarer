@@ -55,6 +55,7 @@ export interface Experience {
 export interface TripPackage {
   id: string;
   destinationId: string;
+  photo: Photo;
   fromCode: string;
   toCode: string;
   nights: number;

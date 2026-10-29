@@ -156,7 +156,13 @@
   "home": {
     "hero": {
       "headline": "Viaja a un lugar que te cambie la mirada.",
-      "lead": "Viajes pequeños y bien hechos, planificados por gente que ya ha estado allí. Alojamientos, experiencias e itinerarios completos en 40 países, con una persona de verdad pendiente de ti durante todo el viaje."
+      "lead": "Viajes pequeños y bien hechos, planificados por gente que ya ha estado allí. Alojamientos, experiencias e itinerarios completos en 40 países, con una persona de verdad pendiente de ti durante todo el viaje.",
+      "eyebrow": "Viajes pequeños, bien pensados",
+      "pause": "Pausar presentación",
+      "play": "Reproducir presentación",
+      "goTo": "Mostrar {place}",
+      "slides": "Lugares destacados",
+      "scroll": "Desliza para explorar"
     },
     "trending": {
       "eyebrow": "Lo más buscado",
@@ -194,7 +200,8 @@
       "fare": "Tarifa",
       "gate": "Puerta",
       "gateValue": "Cuando te venga bien",
-      "pricePrefix": "Por persona desde"
+      "pricePrefix": "Por persona desde",
+      "scrollHint": "Desliza para ver todos los viajes"
     },
     "map": {
       "eyebrow": "El mapa",
@@ -281,6 +288,21 @@
       "successTitle": "Ya estás en la lista.",
       "successBody": "La próxima carta sale el primer domingo del mes. Busca un correo de confirmación de {email}: puede que llegue a Promociones.",
       "again": "Usar otro correo"
+    },
+    "marquee": {
+      "label": "Lugares para los que organizamos viajes"
+    },
+    "gallery": {
+      "eyebrow": "Visto en el camino",
+      "title": "Postales de este año",
+      "dek": "Fotos de nuestro equipo y de la gente que viajó con nosotros."
+    },
+    "stats": {
+      "label": "Wayfarer & Co. en cifras",
+      "countries": "países que planificamos",
+      "travellers": "viajeros desde 2011",
+      "rating": "valoración media",
+      "reply": "minutos hasta que responde una persona"
     }
   },
   "validation": {
@@ -619,6 +641,54 @@
         "country": "México",
         "caption": "Sombrillas de papel, Centro",
         "alt": "Sombrillas de papel y farolillos colgados sobre una calle de Ciudad de México"
+      },
+      "cappadocia": {
+        "name": "Capadocia",
+        "country": "Turquía",
+        "caption": "Globos sobre Göreme al amanecer",
+        "alt": "Decenas de globos aerostáticos elevándose sobre los valles de Capadocia al amanecer"
+      },
+      "amalfi": {
+        "name": "Costa Amalfitana",
+        "country": "Italia",
+        "caption": "Positano al anochecer",
+        "alt": "Las casas iluminadas de Positano escalonadas sobre el mar al atardecer"
+      },
+      "maldives": {
+        "name": "Maldivas",
+        "country": "Maldivas",
+        "caption": "Villas sobre el agua, atolón de Malé Norte",
+        "alt": "Bungalós sobre pilotes unidos por una pasarela sinuosa sobre agua turquesa"
+      },
+      "sahara": {
+        "name": "Sáhara",
+        "country": "Marruecos",
+        "caption": "Dunas de Erg Chebbi, cerca de Merzouga",
+        "alt": "Una caravana de camellos cruzando dunas anaranjadas bajo un cielo azul intenso"
+      },
+      "iceland": {
+        "name": "Islandia",
+        "country": "Islandia",
+        "caption": "Playa de arena negra en Vík",
+        "alt": "Olas rompiendo en una playa de arena negra bajo acantilados entre la niebla en Islandia"
+      },
+      "bali": {
+        "name": "Bali",
+        "country": "Indonesia",
+        "caption": "Terrazas de arroz de Tegallalang",
+        "alt": "Terrazas de arroz de un verde intenso con palmeras en Tegallalang, Bali"
+      },
+      "swissAlps": {
+        "name": "Alpes suizos",
+        "country": "Suiza",
+        "caption": "Un tren rojo sobre un viaducto alpino",
+        "alt": "Un tren rojo cruzando un viaducto de piedra entre bosques otoñales en los Alpes suizos"
+      },
+      "serengeti": {
+        "name": "Serengueti",
+        "country": "Tanzania",
+        "caption": "La migración en las llanuras",
+        "alt": "Una gran manada de ñus pastando en las praderas del Serengueti"
       }
     },
     "stays": {
@@ -883,6 +953,56 @@
           "En Georgia se hace vino en tinajas de barro, las qvevri, desde hace ocho mil años. Un buen bar de vinos te servirá algo anaranjado, sin filtrar y distinto a todo lo que conoces.",
           "Ve a finales de la primavera o a principios del otoño. El verano es caluroso; el invierno, bonito pero gris, y en los meses intermedios la ciudad está en su mejor momento."
         ]
+      }
+    },
+    "gallery": {
+      "sahCamp": {
+        "caption": "Campamento bajo las estrellas, Merzouga",
+        "alt": "Jaimas iluminadas en el Sáhara bajo un cielo lleno de estrellas"
+      },
+      "baliTerraces": {
+        "caption": "Terrazas de arroz desde el aire, Bali",
+        "alt": "Vista aérea de terrazas de arroz curvas en Bali"
+      },
+      "alpTrain": {
+        "caption": "Ventanilla con vistas al Cervino",
+        "alt": "Un tren de montaña rojo entre la nieve con el Cervino al fondo"
+      },
+      "cheetah": {
+        "caption": "Safari matinal, Serengueti",
+        "alt": "Un guepardo de pie sobre una rama caída bajo una acacia"
+      },
+      "balloon": {
+        "caption": "Arriba a las 5, valió la pena — Capadocia",
+        "alt": "Un globo aerostático a rayas flotando sobre los valles de Capadocia"
+      },
+      "fjadra": {
+        "caption": "Cañón de Fjaðrárgljúfur, Islandia",
+        "alt": "Un río serpenteando por un cañón profundo cubierto de musgo en Islandia"
+      },
+      "jokul": {
+        "caption": "Icebergs en Jökulsárlón",
+        "alt": "Icebergs flotando en una laguna glaciar bajo nubes oscuras"
+      },
+      "positanoDay": {
+        "caption": "Positano, colgado del acantilado",
+        "alt": "Casas de colores trepando por un acantilado sobre el mar en Positano"
+      },
+      "lanterns": {
+        "caption": "Calle de faroles, Hoi An",
+        "alt": "Faroles de seda encendidos en una tienda de Hoi An por la noche"
+      },
+      "flamenco": {
+        "caption": "Plaza de España, Sevilla",
+        "alt": "Visitantes bajo los arcos de una gran columnata de ladrillo en Sevilla"
+      },
+      "surf": {
+        "caption": "Mar de fondo atlántico, primera luz",
+        "alt": "Una ola rompiendo frente a acantilados verdes"
+      },
+      "market": {
+        "caption": "Mañana de mercado, fruta en pirámides",
+        "alt": "Pirámides de fruta de colores en un puesto de mercado"
       }
     }
   }

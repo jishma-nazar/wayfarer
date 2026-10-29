@@ -26,9 +26,9 @@ export function SaveButton({ kind, id, name, tone = "photo", className }: { kind
         if (!saved) controls.start({ scale: [1, 1.35, 0.9, 1], transition: { duration: 0.45 } });
       }}
       className={cn(
-        "inline-flex min-h-11 items-center gap-1.5 rounded-sm px-3 text-sm font-semibold transition-colors",
+        "inline-flex min-h-10 items-center gap-1.5 rounded-full px-3.5 text-sm font-semibold transition-colors",
         tone === "photo"
-          ? "bg-[#fbf8f2]/92 text-[#1b1a17] backdrop-blur-[2px] hover:bg-[#fbf8f2]"
+          ? "rounded-full bg-white/90 text-[#0e0e10] backdrop-blur-md hover:bg-white"
           : "border border-hairline-strong text-ink hover:border-ink",
         className
       )}
@@ -37,7 +37,7 @@ export function SaveButton({ kind, id, name, tone = "photo", className }: { kind
         <Heart
           size={16}
           strokeWidth={1.5}
-          className={cn("transition-colors", saved ? "fill-[#c4532d] stroke-[#c4532d]" : "")}
+          className={cn("transition-colors", saved ? "fill-[#ff5a1f] stroke-[#ff5a1f]" : "")}
         />
       </m.span>
       <span>{saved ? t("saved") : t("save")}</span>

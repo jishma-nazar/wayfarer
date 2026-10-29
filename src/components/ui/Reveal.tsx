@@ -1,24 +1,41 @@
 "use client";
 
-import { m } from "framer-motion";
-import type { ReactNode } from "react";
+import { useEffect, useRef, useState, type ReactNode } from "react";
 
 /**
- * Image reveal mask: the frame wipes open once as it enters the viewport.
- * Content is in the DOM from the start (no layout shift, no hidden text); MotionConfig
- * turns this into an instant show for reduced-motion users.
+ * Fades content up as it scrolls into view. Only content that starts below the fold is hidden
+ * (after hydration, so no-JS and above-the-fold content are never invisible). Skipped entirely
+ * for reduced-motion users.
  */
-export function Reveal({ children, className, from = "bottom", delay = 0 }: { children: ReactNode; className?: string; from?: "bottom" | "left"; delay?: number }) {
-  const hidden = from === "bottom" ? "inset(100% 0% 0% 0%)" : "inset(0% 100% 0% 0%)";
+export function Reveal({ children, className, delay = 0 }: { children: ReactNode; className?: string; delay?: number }) {
+  const ref = useRef<HTMLDivElement>(null);
+  const [state, setState] = useState<"idle" | "hidden" | "shown">("idle");
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    if (el.getBoundingClientRect().top < window.innerHeight) return;
+    const io = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setState("shown");
+          io.disconnect();
+        }
+      },
+      { rootMargin: "0px 0px -8% 0px" }
+    );
+    // Hide on the next frame so the transition has a starting point.
+    const raf = requestAnimationFrame(() => setState((s) => (s === "idle" ? "hidden" : s)));
+    io.observe(el);
+    return () => {
+      cancelAnimationFrame(raf);
+      io.disconnect();
+    };
+  }, []);
+
   return (
-    <m.div
-      className={className}
-      initial={{ clipPath: hidden }}
-      whileInView={{ clipPath: "inset(0% 0% 0% 0%)" }}
-      viewport={{ once: true, margin: "0px 0px -10% 0px" }}
-      transition={{ duration: 0.9, ease: [0.65, 0, 0.35, 1], delay }}
-    >
+    <div ref={ref} data-reveal={state} style={delay ? { transitionDelay: `${delay}ms` } : undefined} className={className}>
       {children}
-    </m.div>
+    </div>
   );
 }

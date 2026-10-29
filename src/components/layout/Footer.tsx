@@ -45,7 +45,7 @@ export function Footer() {
   ];
 
   return (
-    <footer className="border-t border-hairline bg-paper-2 pt-16 text-ink lg:pt-24">
+    <footer className="theme-dark pt-20 lg:pt-28">
       <div className="container-x">
         <div className="grid gap-12 lg:grid-cols-12">
           <nav aria-label={ta("footerNav")} className="grid grid-cols-2 gap-8 sm:grid-cols-3 lg:col-span-5">
@@ -55,7 +55,7 @@ export function Footer() {
                 <ul className="space-y-0.5">
                   {col.links.map((l) => (
                     <li key={l.label}>
-                      <Link href={l.href} className="inline-flex min-h-10 items-center text-[0.9375rem] hover:text-accent-strong">
+                      <Link href={l.href} className="inline-flex min-h-10 items-center text-[0.9375rem] hover:text-accent">
                         {l.label}
                       </Link>
                     </li>
@@ -128,7 +128,7 @@ export function Footer() {
             <span className="shrink-0 text-ink-muted">{t("payments")}</span>
             <ul aria-label={t("paymentsLabel")} className="flex flex-wrap gap-1.5">
               {PAYMENTS.map((p) => (
-                <li key={p} className="rounded-sm border border-hairline-strong px-2 py-1 font-mono text-[0.6875rem] uppercase tracking-wider text-ink-muted">
+                <li key={p} className="rounded-full border border-hairline-strong px-2.5 py-1 font-mono text-[0.6875rem] uppercase tracking-wider text-ink-muted">
                   {p}
                 </li>
               ))}

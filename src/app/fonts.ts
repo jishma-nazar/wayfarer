@@ -1,23 +1,24 @@
-import { Fraunces, Hanken_Grotesk, JetBrains_Mono } from "next/font/google";
+import { Bricolage_Grotesque, Geist, Geist_Mono } from "next/font/google";
 
-// Display serif with the soft optical axis; UI grotesk; mono only for codes and coordinates.
-export const fraunces = Fraunces({
+// Display: a bold, slightly condensed grotesk for big confident headlines.
+export const display = Bricolage_Grotesque({
   subsets: ["latin", "latin-ext"],
-  axes: ["SOFT", "opsz"],
-  variable: "--font-fraunces",
+  axes: ["opsz", "wdth"],
+  variable: "--font-display-face",
   display: "swap",
 });
 
-export const hanken = Hanken_Grotesk({
+// UI and body text.
+export const sans = Geist({
   subsets: ["latin", "latin-ext"],
-  variable: "--font-hanken",
+  variable: "--font-sans-face",
   display: "swap",
 });
 
-export const jetbrains = JetBrains_Mono({
+// Only for codes, coordinates and times.
+export const mono = Geist_Mono({
   subsets: ["latin"],
-  weight: ["400", "500"],
-  variable: "--font-jetbrains",
+  variable: "--font-mono-face",
   display: "swap",
   preload: false,
 });

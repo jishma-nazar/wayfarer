@@ -31,15 +31,22 @@ export function Header() {
     <>
       <header
         className={cn(
-          "sticky top-0 z-50 h-[var(--header-h)] border-b transition-[background-color,border-color,color] duration-300",
-          overHero ? "border-transparent bg-transparent text-[#f4efe6]" : "border-hairline bg-paper/95 text-ink backdrop-blur-sm supports-[backdrop-filter]:bg-paper/85"
+          "sticky top-0 z-50 h-[var(--header-h)] transition-colors duration-300",
+          overHero ? "text-white" : "text-ink"
         )}
       >
         {overHero && (
-          <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 h-36 bg-gradient-to-b from-black/45 to-transparent" />
+          <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 h-36 bg-gradient-to-b from-black/40 to-transparent" />
         )}
-        <div className="container-x relative flex h-full items-center justify-between gap-4">
-          <Link href="/" aria-label={ta("home")} className="-ml-1 rounded-sm px-1 py-2">
+        {/* Off the hero the bar floats as a frosted pill. */}
+        <div className="container-x relative h-full py-2">
+        <div
+          className={cn(
+            "flex h-full items-center justify-between gap-4 rounded-full transition-all duration-500",
+            overHero ? "px-1" : "border border-hairline bg-paper/80 pl-5 pr-2 shadow-[0_8px_30px_-12px_rgba(0,0,0,0.25)] backdrop-blur-xl"
+          )}
+        >
+          <Link href="/" aria-label={ta("home")} className="-ml-1 rounded-full px-1 py-2">
             <Wordmark onPhoto={overHero} />
           </Link>
 
@@ -53,14 +60,13 @@ export function Header() {
                       href={item.href}
                       aria-current={active ? "page" : undefined}
                       className={cn(
-                        "relative inline-flex min-h-11 items-center px-3 text-[0.9375rem] font-medium transition-colors",
-                        overHero ? "text-[#f4efe6]/90 hover:text-[#f4efe6]" : "text-ink-muted hover:text-ink",
-                        active && (overHero ? "text-[#f4efe6]" : "text-ink")
+                        "relative inline-flex min-h-10 items-center rounded-full px-4 text-[0.9375rem] font-medium transition-colors",
+                        overHero ? "text-white/85 hover:bg-white/10 hover:text-white" : "text-ink-muted hover:bg-paper-2 hover:text-ink",
+                        active && (overHero ? "bg-white/15 text-white" : "bg-paper-2 text-ink")
                       )}
                     >
                       {t(item.key)}
-                      {active && <span aria-hidden className="absolute inset-x-3 bottom-1.5 h-px bg-accent" />}
-                    </Link>
+                                          </Link>
                   </li>
                 );
               })}
@@ -75,7 +81,7 @@ export function Header() {
             <Link
               href="/saved"
               className={cn(
-                "hidden min-h-11 items-center gap-1.5 rounded-sm px-2.5 text-sm font-medium xl:inline-flex",
+                "hidden min-h-10 items-center gap-1.5 rounded-full px-3 text-sm font-medium xl:inline-flex",
                 overHero ? "hover:bg-white/10" : "hover:bg-paper-2"
               )}
             >
@@ -87,7 +93,7 @@ export function Header() {
                 </span>
               )}
             </Link>
-            <Link href="/enquire" className={cn("btn hidden sm:inline-flex", overHero ? "bg-[#f4efe6] text-[#1b1a17] hover:bg-white" : "btn-primary")}>
+            <Link href="/enquire" className={cn("btn hidden sm:inline-flex", overHero ? "btn-light" : "btn-primary")}>
               {t("planTrip")}
             </Link>
             <button
@@ -96,7 +102,7 @@ export function Header() {
               aria-expanded={menuOpen}
               aria-controls="mobile-menu"
               className={cn(
-                "inline-flex min-h-11 items-center gap-2 rounded-sm px-2.5 text-sm font-semibold xl:hidden",
+                "inline-flex min-h-10 items-center gap-2 rounded-full px-3.5 text-sm font-semibold xl:hidden",
                 overHero ? "hover:bg-white/10" : "hover:bg-paper-2"
               )}
             >
@@ -104,6 +110,7 @@ export function Header() {
               <span>{t("menu")}</span>
             </button>
           </div>
+        </div>
         </div>
       </header>
       <MobileMenu open={menuOpen} onClose={() => setMenuOpen(false)} />

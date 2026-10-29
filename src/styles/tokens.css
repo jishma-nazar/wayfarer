@@ -1,56 +1,57 @@
 /*
  * Wayfarer & Co. — design tokens
  * Single source of truth for colour, type, spacing, radii and motion.
- * Light is the default; dark is a designed palette (warm charcoal), not an inversion.
- * Contrast notes (WCAG AA) are next to each text-bearing pair.
+ * Direction: immersive and bold. Crisp white and deep cinematic black, one sunset accent,
+ * big photography, rounded image cards, pill controls.
+ * Contrast notes (WCAG AA) sit next to each text-bearing pair.
  */
 
 :root {
   /* — Colour: surfaces — */
-  --paper: #f4efe6; /* page */
-  --paper-2: #ebe4d6; /* bands, inset panels */
-  --surface: #fbf8f2; /* cards, sheets, inputs */
-  --hairline: #d9d0bf; /* 1px rules */
-  --hairline-strong: #bfb4a0;
+  --paper: #ffffff; /* page */
+  --paper-2: #f3f3f0; /* bands, inset panels, field fills */
+  --surface: #ffffff; /* cards, sheets */
+  --hairline: #e7e7e2;
+  --hairline-strong: #cfcfc7;
 
   /* — Colour: text — */
-  --ink: #1b1a17; /* 15.1:1 on paper */
-  --ink-muted: #5e5a51; /* 6.1:1 on paper */
-  --ink-faint: #6f6a5f; /* 4.9:1 on paper — captions only */
+  --ink: #0e0e10; /* 19:1 on paper */
+  --ink-muted: #55555c; /* 7.4:1 */
+  --ink-faint: #6b6b72; /* 5.3:1 — captions only */
 
-  /* — Colour: accent (terracotta) — used deliberately, never as a wash — */
-  --accent: #c4532d; /* decorative: stamps, routes, pins, large display only */
-  --accent-strong: #a8441f; /* text + button fill — 5.2:1 on paper, 6:1 with white */
-  --accent-ink: #ffffff; /* text on accent-strong */
-  --accent-soft: #f1ddd2; /* selected chip fill */
+  /* — Colour: accent (sunset) — */
+  --accent: #ff5a1f; /* fills, pins, routes; text on it uses --accent-ink (6.2:1) */
+  --accent-strong: #c2410c; /* accent used as text on paper — 5.2:1 */
+  --accent-ink: #0e0e10;
+  --accent-soft: #ffe8de;
 
-  /* — Colour: secondary (deep olive) — */
-  --olive: #4f5b3a; /* 6.3:1 on paper */
-  --olive-band: #3e4730; /* full-bleed band behind boarding passes */
-  --on-olive: #f4efe6; /* 8.9:1 on olive-band */
+  /* — Secondary — names kept for compatibility:
+     "olive" is the positive green; "olive-band" the cinematic black band. */
+  --olive: #17794a; /* 5.4:1 on paper */
+  --olive-band: #0b0b0d;
+  --on-olive: #f6f6f2; /* 18:1 on band */
 
   /* — Photography — */
-  --photo-filter: saturate(0.92) sepia(0.06) contrast(1.02);
-  --scrim-strong: rgba(18, 16, 12, 0.62);
-  --scrim-soft: rgba(18, 16, 12, 0);
-  --grain-opacity: 0.035;
+  --photo-filter: saturate(1.04) contrast(1.02);
+  --scrim-strong: rgba(6, 6, 8, 0.72);
+  --scrim-soft: rgba(6, 6, 8, 0);
 
   /* — Focus — */
-  --focus: #a8441f;
+  --focus: #ff5a1f;
 
   /* — Type — */
-  --type-display: var(--font-fraunces), "Iowan Old Style", Georgia, serif;
-  --type-ui: var(--font-hanken), ui-sans-serif, system-ui, sans-serif;
-  --type-code: var(--font-jetbrains), ui-monospace, "SFMono-Regular", monospace;
+  --type-display: var(--font-display-face), ui-sans-serif, system-ui, sans-serif;
+  --type-ui: var(--font-sans-face), ui-sans-serif, system-ui, sans-serif;
+  --type-code: var(--font-mono-face), ui-monospace, "SFMono-Regular", monospace;
 
-  --step--1: 0.875rem; /* 14 — labels, captions */
-  --step-0: 1rem; /* 16 — body minimum */
-  --step-1: 1.125rem; /* 18 — lead */
-  --step-2: clamp(1.375rem, 1.2rem + 0.8vw, 1.75rem); /* card titles */
-  --step-3: clamp(1.75rem, 1.4rem + 1.6vw, 2.625rem); /* section heads */
-  --step-4: clamp(2.25rem, 1.6rem + 3vw, 4rem); /* feature heads */
-  --step-5: clamp(2.75rem, 1.6rem + 5.4vw, 6.5rem); /* hero */
-  --tracking-label: 0.14em;
+  --step--1: 0.875rem;
+  --step-0: 1rem;
+  --step-1: 1.125rem;
+  --step-2: clamp(1.375rem, 1.15rem + 0.9vw, 1.875rem); /* card titles */
+  --step-3: clamp(2rem, 1.5rem + 2vw, 3.25rem); /* section heads */
+  --step-4: clamp(2.5rem, 1.6rem + 3.8vw, 5rem); /* feature heads */
+  --step-5: clamp(3.25rem, 1.4rem + 8vw, 9rem); /* hero */
+  --tracking-label: 0.16em;
 
   /* — Space (4px base) — */
   --space-1: 0.25rem;
@@ -62,19 +63,19 @@
   --space-12: 3rem;
   --space-16: 4rem;
   --space-24: 6rem;
-  --section-y: clamp(4rem, 3rem + 5vw, 8.5rem);
+  --section-y: clamp(4.5rem, 3rem + 6vw, 9rem);
   --gutter: clamp(1rem, 0.5rem + 2.5vw, 2.5rem);
-  --max: 1360px;
-  --header-h: 64px;
+  --max: 1440px;
+  --header-h: 68px;
   --bottom-nav-h: calc(64px + env(safe-area-inset-bottom));
 
-  /* — Radii: sharp-ish — */
-  --r-sm: 4px;
-  --r: 6px;
-  --r-lg: 8px;
+  /* — Radii: generous — */
+  --r-sm: 12px;
+  --r: 20px;
+  --r-lg: 28px;
 
-  /* — Elevation: floating UI only — */
-  --elev-float: 0 12px 32px -8px rgba(27, 26, 23, 0.22), 0 2px 6px rgba(27, 26, 23, 0.08);
+  /* — Elevation — */
+  --elev-float: 0 24px 60px -20px rgba(10, 10, 14, 0.35), 0 4px 12px rgba(10, 10, 14, 0.08);
 
   /* — Motion — */
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
@@ -85,38 +86,44 @@
 
 @media (min-width: 1024px) {
   :root {
-    --header-h: 72px;
+    --header-h: 76px;
     --bottom-nav-h: 0px;
   }
 }
 
-/* Dark: warm charcoal, softened paper-white, accent lifted for contrast. */
-:root.dark {
-  --paper: #14130f;
-  --paper-2: #1b1915;
-  --surface: #1f1d18;
-  --hairline: #36322a;
-  --hairline-strong: #4a453a;
+/* Dark: true cinematic black, softened white, accent lifted.
+   `.theme-dark` scopes the same palette to one section (packages band, map, footer)
+   so every component inside adapts without per-component dark styles. */
+:root.dark,
+.theme-dark {
+  --paper: #0b0b0d;
+  --paper-2: #141417;
+  --surface: #17171b;
+  --hairline: #26262c;
+  --hairline-strong: #3b3b43;
 
-  --ink: #ede6d8; /* 14.8:1 on paper */
-  --ink-muted: #a69e8e; /* 7:1 */
-  --ink-faint: #918a7b; /* 5.4:1 */
+  --ink: #f6f6f2; /* 18:1 */
+  --ink-muted: #a3a3ab; /* 7.6:1 */
+  --ink-faint: #8b8b93; /* 5.6:1 */
 
-  --accent: #e07a52;
-  --accent-strong: #e58a63; /* 6.9:1 on paper; dark text on fill */
-  --accent-ink: #14130f;
-  --accent-soft: #3a2519;
+  --accent: #ff6a33;
+  --accent-strong: #ff8a5c; /* 7.4:1 */
+  --accent-ink: #0b0b0d;
+  --accent-soft: #3a1a0e;
 
-  --olive: #a9b588;
-  --olive-band: #29301f;
-  --on-olive: #ede6d8;
+  --olive: #5fd39a;
+  --olive-band: #000000;
+  --on-olive: #f6f6f2;
 
-  --photo-filter: saturate(0.88) sepia(0.06) brightness(0.86) contrast(1.04);
-  --scrim-strong: rgba(8, 7, 5, 0.74);
-  --grain-opacity: 0.05;
+  --photo-filter: saturate(1.02) brightness(0.94);
+  --scrim-strong: rgba(0, 0, 0, 0.78);
 
-  --focus: #e58a63;
-  --elev-float: 0 16px 40px -8px rgba(0, 0, 0, 0.6), 0 2px 6px rgba(0, 0, 0, 0.4);
+  --focus: #ff8a5c;
+  --elev-float: 0 24px 60px -16px rgba(0, 0, 0, 0.8), 0 4px 12px rgba(0, 0, 0, 0.5);
 
   color-scheme: dark;
+}
+.theme-dark {
+  background-color: var(--paper);
+  color: var(--ink);
 }

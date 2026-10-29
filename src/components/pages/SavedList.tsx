@@ -10,7 +10,7 @@ import { useSaved, type SavedItem } from "@/lib/saved";
 import { DestinationCard } from "@/components/cards/DestinationCard";
 import { StayCard } from "@/components/cards/StayCard";
 import { ExperienceCard } from "@/components/cards/ExperienceCard";
-import { BoardingPassCard } from "@/components/cards/BoardingPassCard";
+import { PackageCard } from "@/components/cards/PackageCard";
 
 const ORDER: SavedItem["kind"][] = ["stay", "experience", "package", "destination"];
 
@@ -56,12 +56,12 @@ export function SavedList() {
           return (
             <section key={kind} aria-labelledby={`saved-${kind}`}>
               <h2 id={`saved-${kind}`} className="eyebrow mb-6 text-ink-muted">{tr(`kinds.${kind}`)}</h2>
-              <ul role="list" className={kind === "package" ? "grid gap-8 xl:grid-cols-2" : "grid gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-3"}>
+              <ul role="list" className={kind === "package" ? "grid gap-6 sm:grid-cols-2 lg:grid-cols-3" : "grid gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-3"}>
                 {group.map((i) => (
                   <li key={`${i.kind}:${i.id}`}>
                     {kind === "stay" && byId.stay(i.id) && <StayCard s={byId.stay(i.id)!} />}
                     {kind === "experience" && byId.experience(i.id) && <ExperienceCard e={byId.experience(i.id)!} />}
-                    {kind === "package" && byId.package(i.id) && <BoardingPassCard p={byId.package(i.id)!} notch="var(--paper)" className="border border-hairline" />}
+                    {kind === "package" && byId.package(i.id) && <PackageCard p={byId.package(i.id)!} />}
                     {kind === "destination" && byId.destination(i.id) && <DestinationCard d={byId.destination(i.id)!} />}
                   </li>
                 ))}

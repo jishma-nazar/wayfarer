@@ -25,31 +25,32 @@ Set `NEXT_PUBLIC_SITE_URL` in production. It feeds canonical URLs, hreflang, the
 
 ## Design system
 
-**Type:** Fraunces (display serif, soft optical axis) · Hanken Grotesk (UI/body) · JetBrains Mono (only for codes, coordinates and times).
+Immersive and bold: crisp white and cinematic black, one sunset accent, big photography with text set on the image, rounded cards and pill controls.
 
-**Palette:** one accent, used deliberately.
+**Type:** Bricolage Grotesque (display) · Geist (UI and body) · Geist Mono (codes, coordinates and times only).
 
 | Token | Light | Dark | Use |
 | --- | --- | --- | --- |
-| `--paper` | `#F4EFE6` | `#14130F` | Page |
-| `--paper-2` | `#EBE4D6` | `#1B1915` | Bands, insets |
-| `--surface` | `#FBF8F2` | `#1F1D18` | Cards, sheets, inputs |
-| `--ink` | `#1B1A17` | `#EDE6D8` | Text |
-| `--ink-muted` | `#5E5A51` | `#A69E8E` | Secondary text |
-| `--accent` | `#C4532D` | `#E07A52` | Decorative: stamps, routes, pins |
-| `--accent-strong` | `#A8441F` | `#E58A63` | Accent text and primary buttons (AA) |
-| `--olive` / `--olive-band` | `#4F5B3A` / `#3E4730` | `#A9B588` / `#29301F` | Secondary, packages band |
+| `--paper` | `#FFFFFF` | `#0B0B0D` | Page |
+| `--paper-2` | `#F3F3F0` | `#141417` | Bands, field fills |
+| `--surface` | `#FFFFFF` | `#17171B` | Cards, sheets |
+| `--ink` | `#0E0E10` | `#F6F6F2` | Text |
+| `--ink-muted` | `#55555C` | `#A3A3AB` | Secondary text |
+| `--accent` | `#FF5A1F` | `#FF6A33` | Primary buttons (dark text), pins, routes |
+| `--accent-strong` | `#C2410C` | `#FF8A5C` | Accent used as text (AA) |
 
-Dark mode is its own palette (warm charcoal, softened paper-white, lifted accent, dimmer photo grade, stronger scrims), not an inversion.
+All tokens (colour, type scale, spacing, radii, elevation, motion) live in **`src/styles/tokens.css`**. Add the class `theme-dark` to any element to give that section the dark palette; the packages band, map and footer use it, and every component inside adapts with no extra styles.
 
-**Signature details**
-1. **Boarding-pass packages:** route in monospace (`LIS → OPO`), perforated stub with punched notches, fare code, decorative barcode.
-2. **Coordinates and live local time** on destination cards (`38.72° N · 14:32 local`), computed per IANA time zone in the visitor's browser.
-3. **Dashed routes and passport stamps:** a dot-matrix world generated from real coastlines with a dashed route through featured places; an ink-textured stamp marks "Traveler favorite" items.
+**Motion** (all of it is off for `prefers-reduced-motion`):
+- Hero: full-screen crossfading slideshow with a slow Ken Burns push-in, word-by-word headline rise (pure CSS, so it paints before hydration), slide progress bars and a pause control.
+- Two-row destination marquee that pauses on hover or focus.
+- `Reveal`: content fades up as it scrolls in, hiding only what starts below the fold.
+- `Parallax`: scroll-linked depth on the promises backdrop and the four-column photo gallery.
+- Packages: on large screens the section pins and vertical scroll slides the trips sideways; phones get a swipeable row.
+- Map: the dashed route draws itself in, a light travels along it, and pins pulse.
+- Stats count up when they come into view; stories crossfade full-bleed.
 
-All tokens (colour, type scale, spacing, radii, elevation, motion) live in **`src/styles/tokens.css`**. `src/app/globals.css` maps them into Tailwind (`bg-paper`, `text-ink-muted`, `font-display`…), and Tailwind's default palette is switched off so only brand colours exist.
-
-Photography comes from Unsplash: real, named places served through Unsplash's CDN (`src/lib/image-loader.ts` asks for AVIF/WebP at the right width). A shared CSS grade (`--photo-filter`) keeps them cohesive.
+Photography comes from Unsplash: real, named places served through Unsplash's CDN (`src/lib/image-loader.ts` asks for AVIF/WebP at the right width). Only the current and next hero slides are fetched.
 
 ## Project structure
 
@@ -65,11 +66,11 @@ src/
     layout/               Header, MobileMenu, Footer, BottomNav, HelpButton, ScrollRestorer
     sections/             home page sections (Hero, Trending, EditorsPicks, …)
     search/               SearchModule, DestinationField (combobox), date/guest fields, Popover
-    cards/                DestinationCard, StayCard, ExperienceCard, BoardingPassCard
+    cards/                DestinationCard, StayCard, ExperienceCard, PackageCard
     results/              Results (filters, sort, empty states)
     pages/                SavedList, TripsList, EnquiryFlow
-    ui/                   ThemeToggle, LanguageSwitcher, Rating, Carousel, Photo, Sheet,
-                          SaveButton, PassportStamp, LocalTime, Reveal, Wordmark
+    ui/                   ThemeToggle, LanguageSwitcher, Rating, Carousel, Photo, Sheet, SaveButton,
+                          FavoriteBadge, LocalTime, Reveal, Parallax, CountUp, Wordmark
   lib/                    typed mock data, search (typo/accent tolerant), storage, validation, geo
   styles/tokens.css       design tokens for both themes
 ```
@@ -106,7 +107,7 @@ Prices are USD, formatted with `Intl` for each locale (`$1,840` / `1840 US$`). D
 
 ## Renaming the brand
 
-Change `meta.siteName` and `meta.title` in each messages file, the text in `src/components/ui/Wordmark.tsx`, the ring text in `PassportStamp.tsx`, and the contact details in `src/lib/data.ts` (`contact`). Placeholder legal and registration text is in `footer.legal`.
+Change `meta.siteName` and `meta.title` in each messages file, the text in `src/components/ui/Wordmark.tsx`, and the contact details in `src/lib/data.ts` (`contact`). Placeholder legal and registration text is in `footer.legal`.
 
 ## Known limits
 

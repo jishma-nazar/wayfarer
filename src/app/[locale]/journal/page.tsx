@@ -21,10 +21,10 @@ export default async function JournalPage() {
 
   return (
     <>
-      <PageHeader title={t("title")} dek={t("dek")} />
+      <PageHeader title={t("title")} dek={t("dek")} photo={{ id: "1500043357865-c6b8827edf10" }} />
       <div className="container-x pb-24">
-        <article className="group relative grid gap-6 border-t border-ink pt-8 lg:grid-cols-12 lg:gap-10">
-          <Photo photo={lead.photo} alt={ta(`${lead.id}.alt`)} sizes="(min-width: 1024px) 58vw, 100vw" preload className="aspect-[3/2] rounded-sm lg:col-span-7" />
+        <article className="group relative mt-12 grid gap-6 lg:grid-cols-12 lg:gap-10">
+          <Photo photo={lead.photo} alt={ta(`${lead.id}.alt`)} sizes="(min-width: 1024px) 58vw, 100vw" className="aspect-[3/2] rounded-[24px] lg:col-span-7" />
           <div className="lg:col-span-5 lg:pt-4">
             <p className="eyebrow text-accent-strong">{ta(`${lead.id}.category`)} · {th("readTime", { minutes: lead.readMinutes })}</p>
             <h2 className="t-h1 mt-3">
@@ -38,7 +38,7 @@ export default async function JournalPage() {
           {rest.map((a) => (
             <li key={a.id}>
               <article className="group relative">
-                <Photo photo={a.photo} alt={ta(`${a.id}.alt`)} sizes="(min-width: 768px) 30vw, 100vw" className="aspect-[4/3] rounded-sm" />
+                <Photo photo={a.photo} alt={ta(`${a.id}.alt`)} sizes="(min-width: 768px) 30vw, 100vw" className="aspect-[4/3] rounded-[24px]" />
                 <p className="eyebrow mt-4 text-ink-muted">{ta(`${a.id}.category`)} · {th("readTime", { minutes: a.readMinutes })}</p>
                 <h2 className="t-h3 mt-2">
                   <Link href={`/journal/${a.id}`} className="after:absolute after:inset-0 after:content-[''] group-hover:text-accent-strong">{ta(`${a.id}.title`)}</Link>

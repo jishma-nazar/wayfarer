@@ -5,16 +5,14 @@ export function Wordmark({ className, size = "md", onPhoto }: { className?: stri
   return (
     <span
       className={cn(
-        "font-display inline-flex items-baseline whitespace-nowrap leading-none tracking-[-0.02em]",
-        size === "md" ? "text-[1.375rem] sm:text-[1.5rem]" : "text-[clamp(3.5rem,14vw,13rem)] tracking-[-0.045em]",
+        "font-display inline-flex items-baseline whitespace-nowrap font-bold leading-none",
+        size === "md" ? "text-[1.4rem] tracking-[-0.03em] sm:text-[1.55rem]" : "text-[clamp(4rem,16vw,16rem)] tracking-[-0.045em]",
         className
       )}
-      style={{ fontVariationSettings: '"SOFT" 100, "opsz" 144' }}
+      style={{ fontVariationSettings: '"opsz" 96, "wdth" 100' }}
     >
-      Wayfarer
-      <span className={cn("ml-[0.18em] italic", onPhoto ? "text-[#f0b79c]" : "text-accent")} style={{ fontVariationSettings: '"SOFT" 100, "WONK" 1' }}>
-        &amp;&nbsp;Co.
-      </span>
+      wayfarer
+      <span className={cn("ml-[0.08em]", onPhoto ? "text-[#ff8a5c]" : "text-accent")}>&amp;co.</span>
     </span>
   );
 }
