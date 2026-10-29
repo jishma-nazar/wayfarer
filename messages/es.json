@@ -1005,5 +1005,67 @@
         "alt": "Pirámides de fruta de colores en un puesto de mercado"
       }
     }
+  },
+  "auth": {
+    "signIn": {
+      "metaTitle": "Iniciar sesión",
+      "title": "Hola de nuevo",
+      "dek": "Inicia sesión para ver tus lugares guardados y tus viajes en cualquier dispositivo.",
+      "submit": "Iniciar sesión",
+      "switch": "¿Eres nuevo?",
+      "switchLink": "Crea una cuenta",
+      "forgot": "¿Olvidaste tu contraseña?",
+      "remember": "Mantener la sesión iniciada",
+      "successTitle": "Has iniciado sesión",
+      "successBody": "Qué bien verte de nuevo, {name}. Tus lugares guardados y tus viajes te esperan."
+    },
+    "signUp": {
+      "metaTitle": "Crear una cuenta",
+      "title": "Crea tu cuenta",
+      "dek": "Guarda lugares, sigue tus consultas y continúa donde lo dejaste, en cualquier dispositivo.",
+      "submit": "Crear cuenta",
+      "switch": "¿Ya tienes una cuenta?",
+      "switchLink": "Inicia sesión",
+      "terms": "Acepto las <terms>Condiciones</terms> y la <privacy>Política de privacidad</privacy>",
+      "news": "Envíame la carta mensual (un correo, nada de spam)",
+      "successTitle": "Bienvenido a bordo, {name}",
+      "successBody": "Hemos enviado un enlace de confirmación a {email}. Ábrelo para terminar de configurar tu cuenta."
+    },
+    "forgot": {
+      "metaTitle": "Restablecer contraseña",
+      "title": "¿Olvidaste tu contraseña?",
+      "dek": "Escribe el correo con el que te registraste y te enviaremos un enlace para elegir una nueva.",
+      "submit": "Enviar enlace",
+      "back": "Volver a iniciar sesión",
+      "successTitle": "Revisa tu bandeja de entrada",
+      "successBody": "Si existe una cuenta para {email}, el enlace ya va de camino. Caduca en 30 minutos."
+    },
+    "name": "Nombre completo",
+    "email": "Correo electrónico",
+    "password": "Contraseña",
+    "passwordHint": "Al menos 8 caracteres, con un número.",
+    "show": "Mostrar contraseña",
+    "hide": "Ocultar contraseña",
+    "or": "o",
+    "google": "Continuar con Google",
+    "apple": "Continuar con Apple",
+    "continue": "Ir a la página de inicio",
+    "sending": "Un momento…",
+    "strength": {
+      "label": "Seguridad de la contraseña: {level}",
+      "weak": "Débil",
+      "fair": "Aceptable",
+      "good": "Buena",
+      "strong": "Muy segura"
+    },
+    "errors": {
+      "passwordRequired": "Escribe tu contraseña.",
+      "passwordShort": "Usa al menos 8 caracteres, con algún número.",
+      "termsRequired": "Acepta las condiciones para crear la cuenta."
+    },
+    "demo": "Solo vista previa: las cuentas aún no están conectadas.",
+    "photoCaption": "Positano, Costa Amalfitana",
+    "quote": "«Los mejores viajes empiezan con alguien que ya ha estado allí.»",
+    "account": "Iniciar sesión"
   }
 }

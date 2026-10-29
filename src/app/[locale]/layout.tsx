@@ -20,7 +20,7 @@ import { SITE_URL, alternatesFor } from "@/lib/seo";
  */
 const CLIENT_NAMESPACES = [
   "a11y", "nav", "theme", "language", "moods", "search", "card", "validation", "results", "saved", "trips",
-  "enquire", "help", "home.hero", "home.stats", "home.moods", "home.packages", "home.map", "home.stories", "home.newsletter",
+  "enquire", "help", "auth", "home.hero", "home.stats", "home.moods", "home.packages", "home.map", "home.stories", "home.newsletter",
   "content.destinations", "content.stays", "content.experiences", "content.packages", "content.stories", "content.gallery",
 ];
 

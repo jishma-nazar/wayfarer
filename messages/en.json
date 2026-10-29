@@ -1005,5 +1005,67 @@
         "alt": "Pyramids of colourful fruit on a market stall"
       }
     }
+  },
+  "auth": {
+    "signIn": {
+      "metaTitle": "Sign in",
+      "title": "Welcome back",
+      "dek": "Sign in to see your saved places and trips on any device.",
+      "submit": "Sign in",
+      "switch": "New here?",
+      "switchLink": "Create an account",
+      "forgot": "Forgot password?",
+      "remember": "Keep me signed in",
+      "successTitle": "You’re signed in",
+      "successBody": "Good to have you back, {name}. Your saved places and trips are ready."
+    },
+    "signUp": {
+      "metaTitle": "Create an account",
+      "title": "Create your account",
+      "dek": "Save places, follow your enquiries and pick up where you left off — on any device.",
+      "submit": "Create account",
+      "switch": "Already have an account?",
+      "switchLink": "Sign in",
+      "terms": "I agree to the <terms>Terms</terms> and <privacy>Privacy policy</privacy>",
+      "news": "Send me the monthly letter (one email, no spam)",
+      "successTitle": "Welcome aboard, {name}",
+      "successBody": "We’ve sent a confirmation link to {email}. Open it to finish setting up your account."
+    },
+    "forgot": {
+      "metaTitle": "Reset password",
+      "title": "Forgot your password?",
+      "dek": "Enter the email you signed up with and we’ll send you a link to choose a new one.",
+      "submit": "Send reset link",
+      "back": "Back to sign in",
+      "successTitle": "Check your inbox",
+      "successBody": "If there’s an account for {email}, a reset link is on its way. It expires in 30 minutes."
+    },
+    "name": "Full name",
+    "email": "Email",
+    "password": "Password",
+    "passwordHint": "At least 8 characters, with a number.",
+    "show": "Show password",
+    "hide": "Hide password",
+    "or": "or",
+    "google": "Continue with Google",
+    "apple": "Continue with Apple",
+    "continue": "Continue to the home page",
+    "sending": "One moment…",
+    "strength": {
+      "label": "Password strength: {level}",
+      "weak": "Weak",
+      "fair": "Fair",
+      "good": "Good",
+      "strong": "Strong"
+    },
+    "errors": {
+      "passwordRequired": "Enter your password.",
+      "passwordShort": "Use at least 8 characters, including a number.",
+      "termsRequired": "Please accept the terms to create an account."
+    },
+    "demo": "Preview only — accounts aren’t connected yet.",
+    "photoCaption": "Positano, Amalfi Coast",
+    "quote": "“The best trips start with someone who has been there.”",
+    "account": "Sign in"
   }
 }

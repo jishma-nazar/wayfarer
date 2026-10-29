@@ -1,7 +1,7 @@
 "use client";
 
 import { AnimatePresence, m } from "framer-motion";
-import { ArrowUpRight, Heart, Luggage, X } from "lucide-react";
+import { ArrowUpRight, Heart, Luggage, UserRound, X } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { useEffect, useRef } from "react";
 import { Link, usePathname } from "@/i18n/navigation";
@@ -17,6 +17,7 @@ export function MobileMenu({ open, onClose }: { open: boolean; onClose: () => vo
   const t = useTranslations("nav");
   const tt = useTranslations("theme");
   const tl = useTranslations("language");
+  const ta = useTranslations("auth");
   const ref = useRef<HTMLDivElement>(null);
   const pathname = usePathname();
   useScrollLock(open);
@@ -81,6 +82,10 @@ export function MobileMenu({ open, onClose }: { open: boolean; onClose: () => vo
                 ))}
               </ol>
               <div className="mt-6 flex flex-wrap gap-2">
+                <Link href="/sign-in" onClick={onClose} className="btn btn-ink">
+                  <UserRound size={16} strokeWidth={1.5} aria-hidden />
+                  {ta("account")}
+                </Link>
                 <Link href="/saved" onClick={onClose} className="btn btn-ghost">
                   <Heart size={16} strokeWidth={1.5} aria-hidden />
                   {t("saved")}

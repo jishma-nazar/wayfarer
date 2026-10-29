@@ -1,6 +1,6 @@
 "use client";
 
-import { Heart, Menu } from "lucide-react";
+import { Heart, Menu, UserRound } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { useState } from "react";
 import { Link, usePathname } from "@/i18n/navigation";
@@ -15,6 +15,7 @@ import { NAV_ITEMS } from "./nav";
 
 export function Header() {
   const t = useTranslations("nav");
+  const tAuth = useTranslations("auth");
   const ta = useTranslations("a11y");
   const pathname = usePathname();
   const scrolled = useScrolled(24);
@@ -60,7 +61,7 @@ export function Header() {
                       href={item.href}
                       aria-current={active ? "page" : undefined}
                       className={cn(
-                        "relative inline-flex min-h-10 items-center rounded-full px-4 text-[0.9375rem] font-medium transition-colors",
+                        "relative inline-flex min-h-10 items-center whitespace-nowrap rounded-full px-3 text-[0.9375rem] font-medium transition-colors 2xl:px-4",
                         overHero ? "text-white/85 hover:bg-white/10 hover:text-white" : "text-ink-muted hover:bg-paper-2 hover:text-ink",
                         active && (overHero ? "bg-white/15 text-white" : "bg-paper-2 text-ink")
                       )}
@@ -79,9 +80,21 @@ export function Header() {
               <LanguageSwitcher tone={tone} />
             </div>
             <Link
+              href="/sign-in"
+              aria-current={pathname.startsWith("/sign-") ? "page" : undefined}
+              className={cn(
+                // Room is tight when the full nav shows (xl), so sign-in moves into the menu there.
+                "hidden min-h-10 items-center gap-1.5 whitespace-nowrap rounded-full px-3 text-sm font-medium lg:inline-flex xl:hidden 2xl:inline-flex",
+                overHero ? "hover:bg-white/10" : "hover:bg-paper-2"
+              )}
+            >
+              <UserRound size={16} strokeWidth={1.75} aria-hidden />
+              <span>{tAuth("account")}</span>
+            </Link>
+            <Link
               href="/saved"
               className={cn(
-                "hidden min-h-10 items-center gap-1.5 rounded-full px-3 text-sm font-medium xl:inline-flex",
+                "hidden min-h-10 items-center gap-1.5 whitespace-nowrap rounded-full px-3 text-sm font-medium 2xl:inline-flex",
                 overHero ? "hover:bg-white/10" : "hover:bg-paper-2"
               )}
             >
@@ -102,7 +115,7 @@ export function Header() {
               aria-expanded={menuOpen}
               aria-controls="mobile-menu"
               className={cn(
-                "inline-flex min-h-10 items-center gap-2 rounded-full px-3.5 text-sm font-semibold xl:hidden",
+                "inline-flex min-h-10 items-center gap-2 rounded-full px-3.5 text-sm font-semibold 2xl:hidden",
                 overHero ? "hover:bg-white/10" : "hover:bg-paper-2"
               )}
             >
