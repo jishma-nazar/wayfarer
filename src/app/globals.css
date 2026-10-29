@@ -285,7 +285,7 @@ html.theme-transition *::after {
     transform: scale(1.02) translate3d(0, 0, 0);
   }
   to {
-    transform: scale(1.16) translate3d(-1.5%, -1%, 0);
+    transform: scale(1.24) translate3d(-2%, -1.5%, 0);
   }
 }
 /* Linear and longer than a slide (7s) plus its crossfade (1.4s), so the push-in never
