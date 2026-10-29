@@ -6,7 +6,7 @@ export function Wordmark({ className, size = "md", onPhoto }: { className?: stri
     <span
       className={cn(
         "font-display inline-flex items-baseline whitespace-nowrap font-bold leading-none",
-        size === "md" ? "text-[1.4rem] tracking-[-0.03em] sm:text-[1.55rem]" : "text-[clamp(4rem,16vw,16rem)] tracking-[-0.045em]",
+        size === "md" ? "text-[1.25rem] tracking-[-0.03em] max-[380px]:text-[1.1rem] sm:text-[1.55rem]" : "text-[clamp(2.75rem,15vw,16rem)] tracking-[-0.045em]",
         className
       )}
       style={{ fontVariationSettings: '"opsz" 96, "wdth" 100' }}

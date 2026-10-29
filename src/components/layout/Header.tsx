@@ -74,23 +74,12 @@ export function Header() {
             </ul>
           </nav>
 
-          <div className="flex items-center gap-1 sm:gap-2">
-            <div className="hidden items-center gap-1 md:flex">
+          <div className="flex shrink-0 items-center gap-1 sm:gap-2">
+            {/* Theme + language: in the header where there's room; in the menu when the full nav takes the space (xl). */}
+            <div className="hidden items-center gap-0.5 lg:flex xl:hidden 2xl:flex">
               <ThemeToggle tone={tone} />
               <LanguageSwitcher tone={tone} />
             </div>
-            <Link
-              href="/sign-in"
-              aria-current={pathname.startsWith("/sign-") ? "page" : undefined}
-              className={cn(
-                // Room is tight when the full nav shows (xl), so sign-in moves into the menu there.
-                "hidden min-h-10 items-center gap-1.5 whitespace-nowrap rounded-full px-3 text-sm font-medium lg:inline-flex xl:hidden 2xl:inline-flex",
-                overHero ? "hover:bg-white/10" : "hover:bg-paper-2"
-              )}
-            >
-              <UserRound size={16} strokeWidth={1.75} aria-hidden />
-              <span>{tAuth("account")}</span>
-            </Link>
             <Link
               href="/saved"
               className={cn(
@@ -106,6 +95,18 @@ export function Header() {
                 </span>
               )}
             </Link>
+            {/* Always visible, right beside the main CTA, at every width. */}
+            <Link
+              href="/sign-in"
+              aria-current={pathname.startsWith("/sign-") ? "page" : undefined}
+              className={cn(
+                "inline-flex min-h-10 items-center gap-1.5 whitespace-nowrap rounded-full border px-3 text-sm font-semibold transition-colors max-[380px]:px-2.5 max-[380px]:text-[0.8125rem] sm:min-h-[46px] sm:px-4",
+                overHero ? "border-white/50 hover:bg-white/10" : "border-hairline-strong hover:border-ink"
+              )}
+            >
+              <UserRound size={16} strokeWidth={1.75} aria-hidden className="hidden sm:block" />
+              <span>{tAuth("account")}</span>
+            </Link>
             <Link href="/enquire" className={cn("btn hidden sm:inline-flex", overHero ? "btn-light" : "btn-primary")}>
               {t("planTrip")}
             </Link>
@@ -120,7 +121,7 @@ export function Header() {
               )}
             >
               <Menu size={20} strokeWidth={1.5} aria-hidden />
-              <span>{t("menu")}</span>
+              <span className="sr-only sm:not-sr-only">{t("menu")}</span>
             </button>
           </div>
         </div>
