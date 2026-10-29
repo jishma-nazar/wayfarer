@@ -63,7 +63,7 @@ export function PackagesScroller({ eyebrow, title, dek, cta, hint, cards }: { ey
         <div className="container-x">{intro}</div>
         <ul role="list" className="no-scrollbar mt-10 flex snap-x snap-mandatory gap-4 overflow-x-auto px-[var(--gutter)] pb-2">
           {cards.map((c, i) => (
-            <li key={i} className="w-[84vw] max-w-[440px] shrink-0 snap-start">{c}</li>
+            <li key={i} className="flex w-[84vw] max-w-[440px] shrink-0 snap-start">{c}</li>
           ))}
         </ul>
       </div>
@@ -77,7 +77,7 @@ export function PackagesScroller({ eyebrow, title, dek, cta, hint, cards }: { ey
           {intro}
           <ul role="list" className="flex gap-6">
             {cards.map((c, i) => (
-              <li key={i} className="h-[min(72vh,640px)] w-[min(36vw,520px)] shrink-0">{c}</li>
+              <li key={i} className="flex min-h-[min(72vh,640px)] w-[min(36vw,520px)] shrink-0">{c}</li>
             ))}
           </ul>
         </m.div>

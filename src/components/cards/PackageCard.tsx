@@ -21,7 +21,7 @@ export function PackageCard({ p, className, sizes = "(min-width: 1024px) 36vw, 8
   const departure = format.dateTime(new Date(Date.UTC(y, mo - 1, 15)), { month: "short", year: "numeric", timeZone: "UTC" });
 
   return (
-    <article className={cn("group relative isolate flex aspect-[4/5] flex-col justify-between overflow-hidden rounded-[28px] bg-[#141417] p-6 text-white sm:p-7", className)}>
+    <article className={cn("group relative isolate flex min-h-[34rem] flex-col justify-between gap-10 overflow-hidden rounded-[28px] bg-[#141417] p-6 text-white sm:p-7", className)}>
       <Photo photo={p.photo} alt="" sizes={sizes} className="absolute inset-0 -z-10 h-full" imgClassName="transition-transform duration-[1.4s] ease-out group-hover:scale-[1.06]" />
       <div aria-hidden className="absolute inset-0 -z-10 bg-gradient-to-t from-black/90 via-black/35 to-black/30" />
 
@@ -39,7 +39,7 @@ export function PackageCard({ p, className, sizes = "(min-width: 1024px) 36vw, 8
       </p>
 
       <div>
-        <h3 className="text-[clamp(1.75rem,1.3rem+1.6vw,2.75rem)] leading-[0.95]">{title}</h3>
+        <h3 className="text-[clamp(1.6rem,1.25rem+1.2vw,2.25rem)] leading-[1.02]">{title}</h3>
         <ul className="mt-4 space-y-1 text-[0.9375rem] text-white/80">
           {highlights.slice(0, 2).map((h) => (
             <li key={h} className="flex gap-2">
